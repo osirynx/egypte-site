@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="google-site-verification" content="B62zbe7mh6IDkdWb-xNIjTBdOqWljQZGFz5wWBEnhRI" />
+<meta name="google-site-verification" content="vqd1HhUTNli2LN_HdfTKAqUWa0SSghc0HCP_p_ClBlU" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Budget voyage Égypte — vols, hébergement, conseils</title>
+<meta name="description" content="Budget voyage Égypte : vols, hébergements, monnaie, santé, météo. Tous les conseils pratiques pour 14 jours. Visa, transports, nourriture."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://egypte-mmxxvi.vercel.app/infos.html"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://egypte-mmxxvi.vercel.app/infos.html"/>
+<meta property="og:title" content="Budget voyage Égypte — vols, hébergement, santé, conseils"/>
+<meta property="og:description" content="Budget, vols, hébergements, santé, météo, conseils : tout ce qu'il faut savoir pour voyager en Égypte."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1622228246986-28e3b76a2ef6?w=1200&q=80"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/styles.css?v=10"/>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHZ4902E1E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DHZ4902E1E');</script></head>
+<body data-page="infos">
+
+<main>
+  <section class="page-head">
+    <a href="index.html" class="back-link" aria-label="Retour à l'accueil">‹ Retour</a>
+    <span class="eyebrow">Chapitre VI</span>
+    <h1>Infos <i>pratiques</i></h1>
+    <div class="section-line" aria-hidden="true"></div>
+    <p class="lead">Le carnet de route — vols, hébergements, budget, santé, météo, conseils glanés au fil des jours.</p>
+  </section>
+
+  <section aria-label="Informations pratiques du voyage">
+    <div class="infos-grid" id="infosGrid" role="list"></div>
+  </section>
+</main>
+
+<script src="assets/data.js?v=8"></script>
+<script src="assets/app.js?v=8"></script>
+<script>
+const ig = document.getElementById('infosGrid');
+window.INFOS.forEach(info => {
+  const el = document.createElement('article');
+  el.className = 'info-card reveal';
+  el.setAttribute('role', 'listitem');
+  el.setAttribute('aria-label', info.t);
+  el.innerHTML = `
+    <span class="icon" aria-hidden="true">${info.ic}</span>
+    <h2>${info.t}</h2>
+    <ul>${info.items.map(x => `<li>${x}</li>`).join('')}</ul>`;
+  ig.appendChild(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.info-card.reveal').forEach(el => {
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.disconnect(); } });
+      }, {threshold: .12});
+      io.observe(el);
+    });
+  }, 50);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://egypte-mmxxvi.vercel.app/sitemap.xml

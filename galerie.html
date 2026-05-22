@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="google-site-verification" content="B62zbe7mh6IDkdWb-xNIjTBdOqWljQZGFz5wWBEnhRI" />
+<meta name="google-site-verification" content="vqd1HhUTNli2LN_HdfTKAqUWa0SSghc0HCP_p_ClBlU" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Galerie · Égypte MMXXVI — 28 photos du voyage</title>
+<meta name="description" content="La galerie photo du voyage en Égypte : 28 fragments et 9 moments impérissables — pyramides, Nil, temples, désert. Avril 2026."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://egypte-mmxxvi.vercel.app/galerie.html"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://egypte-mmxxvi.vercel.app/galerie.html"/>
+<meta property="og:title" content="Galerie · Égypte MMXXVI — 28 photos du voyage"/>
+<meta property="og:description" content="28 fragments photographiques du voyage en Égypte. Pyramides, Nil, temples, désert. Avril 2026."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?w=1200&q=80"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/styles.css?v=10"/>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHZ4902E1E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DHZ4902E1E');</script></head>
+<body data-page="galerie">
+
+<main>
+  <section class="page-head">
+    <a href="index.html" class="back-link" aria-label="Retour à l'accueil">‹ Retour</a>
+    <span class="eyebrow">Chapitre III</span>
+    <h1>La <i>Galerie</i></h1>
+    <div class="section-line" aria-hidden="true"></div>
+    <p class="lead">Vingt-huit fragments du voyage — et neuf moments choisis qui resteront.</p>
+  </section>
+
+  <section class="galerie-wrap" id="galerie" aria-label="Mosaïque de photos">
+    <div class="s-head reveal">
+      <span class="eyebrow">Mosaïque</span>
+      <h2>Vingt-huit <i>fragments</i></h2>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="masonry" id="masonry" role="list"></div>
+  </section>
+
+  <section id="bestof" aria-label="Neuf moments impérissables">
+    <div class="s-head reveal">
+      <span class="eyebrow">Best Of</span>
+      <h2>Neuf <i>moments</i> impérissables</h2>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="bestof-grid" id="bestofGrid"></div>
+  </section>
+</main>
+
+<script src="assets/data.js?v=8"></script>
+<script src="assets/app.js?v=8"></script>
+<script>
+const masonry = document.getElementById('masonry');
+window.PHOTOS.forEach((p, i) => {
+  const el = document.createElement('div');
+  el.className = 'm-item';
+  el.dataset.img = i;
+  el.setAttribute('role', 'listitem');
+  el.setAttribute('tabindex', '0');
+  el.setAttribute('aria-label', `Photo ${i + 1} — ouvrir en grand`);
+  el.innerHTML = `<img loading="lazy" src="${p}" alt="Photo de voyage en Égypte ${i + 1}"/>`;
+  masonry.appendChild(el);
+});
+
+const bo = document.getElementById('bestofGrid');
+window.BESTOF.forEach(it => {
+  const el = document.createElement('div');
+  el.className = 'bo reveal';
+  el.dataset.img = it.img;
+  el.setAttribute('tabindex', '0');
+  el.setAttribute('role', 'button');
+  el.setAttribute('aria-label', `${it.t} — ${it.d}`);
+  el.innerHTML = `
+    <img loading="lazy" src="${window.PHOTOS[it.img]}" alt="${it.t}"/>
+    <div class="meta" aria-hidden="true">
+      <span class="num">${it.n}</span>
+      <span class="ttl">${it.t}</span>
+      <span class="day-tag">${it.d}</span>
+    </div>`;
+  bo.appendChild(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.bo.reveal, .s-head.reveal').forEach(el => {
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.disconnect(); } });
+      }, {threshold: .12});
+      io.observe(el);
+    });
+
+    // Keyboard support
+    document.querySelectorAll('.m-item[tabindex], .bo[tabindex]').forEach(el => {
+      el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+      });
+    });
+  }, 50);
+});
+</script>
+</body>
+</html>

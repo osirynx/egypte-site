@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="google-site-verification" content="B62zbe7mh6IDkdWb-xNIjTBdOqWljQZGFz5wWBEnhRI" />
+<meta name="google-site-verification" content="vqd1HhUTNli2LN_HdfTKAqUWa0SSghc0HCP_p_ClBlU" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mythologie égyptienne — dieux, pharaons et temples</title>
+<meta name="description" content="Les dieux et pharaons de l'Égypte ancienne rencontrés au fil des temples : Horus, Isis, Osiris, Ramsès II, Toutankhamon, Hatchepsout, Sobek, Maât."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://egypte-mmxxvi.vercel.app/mythologie.html"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://egypte-mmxxvi.vercel.app/mythologie.html"/>
+<meta property="og:title" content="Mythologie égyptienne — dieux, pharaons et temples"/>
+<meta property="og:description" content="Horus, Isis, Osiris, Ramsès II, Toutankhamon… Les divinités et pharaons rencontrés au fil des temples égyptiens."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1593005510329-8a4035a7238f?w=1200&q=80"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/styles.css?v=10"/>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHZ4902E1E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DHZ4902E1E');</script></head>
+<body data-page="mythologie">
+
+<main>
+  <section class="page-head">
+    <a href="index.html" class="back-link" aria-label="Retour à l'accueil">‹ Retour</a>
+    <span class="eyebrow">Chapitre V</span>
+    <h1>La <i>Mythologie</i></h1>
+    <div class="section-line" aria-hidden="true"></div>
+    <p class="lead">Les dieux et déesses rencontrés au fil des temples — une cosmologie qui se dévoile.</p>
+  </section>
+
+  <section aria-label="Panthéon égyptien">
+    <p class="mytho-intro reveal">« À travers les temples, les tombes et les hiéroglyphes, c'est toute une cosmologie qui se dévoile. Voici les dieux et déesses rencontrés au fil du voyage. »</p>
+    <div class="mytho-grid" id="mythoGrid" role="list"></div>
+  </section>
+</main>
+
+<script src="assets/data.js?v=8"></script>
+<script src="assets/app.js?v=8"></script>
+<script>
+const mg = document.getElementById('mythoGrid');
+window.GODS.forEach(g => {
+  const el = document.createElement('article');
+  el.className = 'god reveal';
+  el.setAttribute('role', 'listitem');
+  el.setAttribute('aria-label', `${g.name} — ${g.role}`);
+  el.innerHTML = `
+    <div class="god-symbol" aria-hidden="true">${g.sym}</div>
+    <span class="eyebrow">${g.role}</span>
+    <h2>${g.name}</h2>
+    <p>${g.text}</p>
+    <span class="vu">${g.vu}</span>`;
+  mg.appendChild(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.god.reveal, .mytho-intro.reveal').forEach(el => {
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.disconnect(); } });
+      }, {threshold: .12});
+      io.observe(el);
+    });
+  }, 50);
+});
+</script>
+</body>
+</html>
