@@ -40,15 +40,32 @@
   </section>
 </main>
 
-<script src="assets/data.js?v=8"></script>
+<!-- Myth Panel -->
+<div class="myth-overlay" id="mythOverlay" aria-hidden="true"></div>
+<div class="myth-panel" id="mythPanel" role="dialog" aria-modal="true" aria-labelledby="mythPanelTitle">
+  <span class="myth-panel-handle" aria-hidden="true"></span>
+  <button class="myth-panel-close" id="mythPanelClose" aria-label="Fermer">✕</button>
+  <img class="myth-panel-img" id="mythPanelImg" src="" alt="" loading="lazy">
+  <div class="myth-panel-body">
+    <span class="eyebrow" id="mythPanelRole"></span>
+    <h2 id="mythPanelTitle"></h2>
+    <span class="myth-panel-epoch" id="mythPanelEpoch"></span>
+    <p class="myth-panel-detail" id="mythPanelDetail"></p>
+    <span class="myth-panel-vu" id="mythPanelVu"></span>
+  </div>
+</div>
+
+<script src="assets/data.js?v=9"></script>
 <script src="assets/app.js?v=8"></script>
 <script>
 const mg = document.getElementById('mythoGrid');
-window.GODS.forEach(g => {
+window.GODS.forEach((g, i) => {
   const el = document.createElement('article');
   el.className = 'god reveal';
-  el.setAttribute('role', 'listitem');
-  el.setAttribute('aria-label', `${g.name} — ${g.role}`);
+  el.setAttribute('role', 'button');
+  el.setAttribute('tabindex', '0');
+  el.setAttribute('aria-label', `${g.name} — ${g.role}. Cliquer pour en savoir plus.`);
+  el.dataset.idx = i;
   el.innerHTML = `
     <div class="god-symbol" aria-hidden="true">${g.sym}</div>
     <span class="eyebrow">${g.role}</span>
@@ -58,6 +75,64 @@ window.GODS.forEach(g => {
   mg.appendChild(el);
 });
 
+// Panel open/close
+const panel   = document.getElementById('mythPanel');
+const overlay = document.getElementById('mythOverlay');
+const pImg    = document.getElementById('mythPanelImg');
+const pRole   = document.getElementById('mythPanelRole');
+const pTitle  = document.getElementById('mythPanelTitle');
+const pEpoch  = document.getElementById('mythPanelEpoch');
+const pDetail = document.getElementById('mythPanelDetail');
+const pVu     = document.getElementById('mythPanelVu');
+
+function openPanel(g) {
+  pImg.src    = g.img || '';
+  pImg.alt    = g.name;
+  pRole.textContent   = g.role;
+  pTitle.textContent  = g.name;
+  pEpoch.textContent  = g.epoch || '';
+  pDetail.textContent = g.detail || g.text;
+  pVu.textContent     = g.vu;
+  panel.classList.add('open');
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  panel.scrollTop = 0;
+  setTimeout(() => document.getElementById('mythPanelClose').focus(), 50);
+}
+
+function closePanel() {
+  panel.classList.remove('open');
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// Open on click / Enter / Space
+mg.addEventListener('click', e => {
+  const card = e.target.closest('[data-idx]');
+  if (card) openPanel(window.GODS[+card.dataset.idx]);
+});
+mg.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    const card = e.target.closest('[data-idx]');
+    if (card) { e.preventDefault(); openPanel(window.GODS[+card.dataset.idx]); }
+  }
+});
+
+// Close
+document.getElementById('mythPanelClose').addEventListener('click', closePanel);
+overlay.addEventListener('click', closePanel);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+
+// Swipe down to close (mobile)
+let touchStartY = 0;
+panel.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, {passive:true});
+panel.addEventListener('touchend', e => {
+  if (e.changedTouches[0].clientY - touchStartY > 80 && panel.scrollTop === 0) closePanel();
+}, {passive:true});
+
+// Intersection observer for reveal
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     document.querySelectorAll('.god.reveal, .mytho-intro.reveal').forEach(el => {
