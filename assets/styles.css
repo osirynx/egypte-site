@@ -599,10 +599,11 @@ footer .foot-nav a:hover{color:var(--gold)}
   overscroll-behavior:contain;
   -webkit-overflow-scrolling:touch;
   transform:translateY(100%);
+  pointer-events:none;
   transition:transform .4s cubic-bezier(.22,.61,.36,1);
   will-change:transform;
 }
-.myth-panel.open{transform:translateY(0)}
+.myth-panel.open{transform:translateY(0);pointer-events:all}
 
 /* swipe handle */
 .myth-panel-handle{
@@ -654,11 +655,13 @@ footer .foot-nav a:hover{color:var(--gold)}
     width:100%;max-width:680px;max-height:85vh;
     border:1px solid rgba(201,168,76,.3);
     transform:translate(-50%,-50%) scale(.95);
+    pointer-events:none;
     opacity:0;
     transition:transform .35s cubic-bezier(.22,.61,.36,1),opacity .3s ease;
   }
   .myth-panel.open{
     transform:translate(-50%,-50%) scale(1);
+    pointer-events:all;
     opacity:1;
   }
   .myth-panel-handle{display:none}
