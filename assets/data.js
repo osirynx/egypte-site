@@ -40,7 +40,7 @@ window.PHOTOS = [
   /* ABOU SIMBEL */
   /* 14 */ 'photos/20260416_075847.jpg',    /* Colosses Abou Simbel — ext. ★     */
   /* 15 */ 'photos/j5_01.jpg',             /* Abou Simbel — vue générale ★       */
-  /* 16 */ 'photos/IMG20260416080126.jpg',  /* Statues — intérieur Abou Simbel ★ */
+  /* 16 */ 'photos/20260416_080004.jpg',     /* Statues — intérieur Abou Simbel ★ */
   /* 17 */ 'photos/20260416_080253.jpg',    /* Sanctuaire — Abou Simbel           */
   /* 18 */ 'photos/20260416_081205.jpg',    /* Couloir hiéroglyphes Abou Simbel   */
   /* CROISIÈRE */
@@ -48,7 +48,7 @@ window.PHOTOS = [
   /* 20 */ 'photos/IMG20260417152913.jpg',  /* Crocodiles momifiés Kom Ombo ★     */
   /* 21 */ 'photos/j7_01.jpg',             /* Edfou — pylônes ★                  */
   /* 22 */ 'photos/j7_02.jpg',             /* Edfou — hiéroglyphes               */
-  /* 23 */ 'photos/20260417_112704.jpg',    /* Pont du bateau + rives du Nil      */
+  /* 23 */ 'photos/20260417_122007.jpg',    /* Pont du bateau + rives du Nil      */
   /* LOUXOR */
   /* 24 */ 'photos/20260421_182935.jpg',    /* Temple de Louxor — crépuscule ★★  */
   /* 25 */ 'photos/j10_03.jpg',            /* Louxor de nuit — coucher soleil    */
