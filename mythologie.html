@@ -45,7 +45,7 @@
 <div class="myth-panel" id="mythPanel" role="dialog" aria-modal="true" aria-labelledby="mythPanelTitle">
   <span class="myth-panel-handle" aria-hidden="true"></span>
   <button class="myth-panel-close" id="mythPanelClose" aria-label="Fermer">✕</button>
-  <img class="myth-panel-img" id="mythPanelImg" alt="" loading="lazy">
+  <img class="myth-panel-img" id="mythPanelImg" alt="">
   <div class="myth-panel-body">
     <span class="eyebrow" id="mythPanelRole"></span>
     <h2 id="mythPanelTitle"></h2>
@@ -55,7 +55,7 @@
   </div>
 </div>
 
-<script src="assets/data.js?v=9"></script>
+<script src="assets/data.js?v=10"></script>
 <script src="assets/app.js?v=8"></script>
 <script>
 const mg = document.getElementById('mythoGrid');
@@ -85,9 +85,19 @@ const pEpoch  = document.getElementById('mythPanelEpoch');
 const pDetail = document.getElementById('mythPanelDetail');
 const pVu     = document.getElementById('mythPanelVu');
 
+// iOS scroll lock: prevent body touchmove when panel is open
+function blockBodyScroll(e) {
+  if (!panel.contains(e.target)) e.preventDefault();
+}
+
 function openPanel(g) {
-  pImg.src    = g.img || '';
-  pImg.alt    = g.name;
+  pImg.style.display = '';
+  pImg.src = '';
+  pImg.alt = g.name;
+  pImg.onerror = function() { this.style.display = 'none'; };
+  pImg.onload  = function() { this.style.display = ''; };
+  if (g.img) pImg.src = g.img;
+  else pImg.style.display = 'none';
   pRole.textContent   = g.role;
   pTitle.textContent  = g.name;
   pEpoch.textContent  = g.epoch || '';
@@ -97,6 +107,7 @@ function openPanel(g) {
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  document.addEventListener('touchmove', blockBodyScroll, {passive: false});
   panel.scrollTop = 0;
   setTimeout(() => document.getElementById('mythPanelClose').focus(), 50);
 }
@@ -106,6 +117,7 @@ function closePanel() {
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  document.removeEventListener('touchmove', blockBodyScroll);
 }
 
 // Open on click / Enter / Space
