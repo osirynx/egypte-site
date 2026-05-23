@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/styles.css?v=11"/>
+<link rel="stylesheet" href="assets/styles.css?v=12"/>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHZ4902E1E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DHZ4902E1E');</script></head>
@@ -106,6 +106,7 @@ function openPanel(g) {
   panel.classList.add('open');
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
+  document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
   document.addEventListener('touchmove', blockBodyScroll, {passive: false});
   panel.scrollTop = 0;
@@ -116,6 +117,7 @@ function closePanel() {
   panel.classList.remove('open');
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
+  document.documentElement.style.overflow = '';
   document.body.style.overflow = '';
   document.removeEventListener('touchmove', blockBodyScroll);
 }

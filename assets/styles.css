@@ -17,7 +17,7 @@
   --sans:'Josefin Sans',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   background:var(--obsidian);
   color:var(--text-light);
@@ -25,7 +25,6 @@ body{
   font-weight:300;
   font-size:15px;
   line-height:1.7;
-  overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block}
@@ -586,9 +585,10 @@ footer .foot-nav a:hover{color:var(--gold)}
   position:fixed;inset:0;z-index:900;
   background:rgba(0,0,0,.72);
   opacity:0;pointer-events:none;
-  transition:opacity .3s ease;
+  visibility:hidden;
+  transition:opacity .3s ease,visibility 0s linear .3s;
 }
-.myth-overlay.open{opacity:1;pointer-events:all}
+.myth-overlay.open{opacity:1;pointer-events:all;visibility:visible;transition:opacity .3s ease,visibility 0s;}
 
 .myth-panel{
   position:fixed;bottom:0;left:0;right:0;z-index:901;
