@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/styles.css?v=12"/>
+<link rel="stylesheet" href="assets/styles.css?v=13"/>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHZ4902E1E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DHZ4902E1E');</script></head>
@@ -91,6 +91,8 @@ function blockBodyScroll(e) {
 }
 
 function openPanel(g) {
+  panel.style.display = '';
+  overlay.style.display = '';
   pImg.style.display = '';
   pImg.src = '';
   pImg.alt = g.name;
@@ -106,8 +108,11 @@ function openPanel(g) {
   panel.classList.add('open');
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
-  document.documentElement.style.overflow = 'hidden';
-  document.body.style.overflow = 'hidden';
+  const scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%';
+  document.body.dataset.scrollLockY = scrollY;
   document.addEventListener('touchmove', blockBodyScroll, {passive: false});
   panel.scrollTop = 0;
   setTimeout(() => document.getElementById('mythPanelClose').focus(), 50);
@@ -117,9 +122,19 @@ function closePanel() {
   panel.classList.remove('open');
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
-  document.documentElement.style.overflow = '';
-  document.body.style.overflow = '';
+  const scrollY = +(document.body.dataset.scrollLockY || 0);
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  delete document.body.dataset.scrollLockY;
+  window.scrollTo(0, scrollY);
   document.removeEventListener('touchmove', blockBodyScroll);
+  setTimeout(() => {
+    if (!panel.classList.contains('open')) {
+      panel.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+  }, 450);
 }
 
 // Open on click / Enter / Space
