@@ -73,6 +73,13 @@ function injectShell(activePage) {
   document.body.insertAdjacentHTML('afterbegin', navHTML);
   document.body.insertAdjacentHTML('beforeend', footHTML);
 
+  const gygScript = document.createElement('script');
+  gygScript.async = true;
+  gygScript.defer = true;
+  gygScript.src = 'https://widget.getyourguide.com/dist/pa.umd.production.min.js';
+  gygScript.dataset.gygPartnerId = 'JDK0THN';
+  document.head.appendChild(gygScript);
+
   if (activePage) {
     const a = document.querySelector(`.nav-links a[data-page="${activePage}"]`);
     if (a) a.classList.add('active');

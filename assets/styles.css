@@ -534,6 +534,11 @@ footer .foot-nav a:hover{color:var(--gold)}
 @media (max-width:580px){.sites-grid{grid-template-columns:1fr}}
 
 /* City practical info */
+.gyg-section{padding:3.5rem 6vw;background:var(--obsidian);border-top:1px solid rgba(201,168,76,.08);text-align:center}
+.gyg-section .eyebrow{margin-bottom:.9rem}
+.gyg-desc{font-size:.78rem;color:var(--text-light);opacity:.7;margin:.6rem auto 1.6rem;max-width:480px;line-height:1.65}
+.gyg-btn{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-family:var(--sans);font-weight:300;color:var(--text-light);border:1px solid rgba(201,168,76,.3);padding:.75rem 1.8rem;transition:color .25s,border-color .25s}
+.gyg-btn:hover{color:var(--gold);border-color:var(--gold)}
 .city-pratique{padding:6rem 6vw;background:rgba(26,20,14,.8)}
 .pratique-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
