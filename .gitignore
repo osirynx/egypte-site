@@ -1,3 +1,5 @@
 *.mp4
 node_modules/
 .DS_Store
+photos_backup/
+photos_par_jour/

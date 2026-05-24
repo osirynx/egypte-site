@@ -8,11 +8,11 @@
    ║  COMMENT AJOUTER VOS PROPRES PHOTOS ?                   ║
    ║                                                          ║
    ║  1. Déposez vos photos dans le dossier  photos/          ║
-   ║     → nommez-les  01.jpg, 02.jpg, 03.jpg …              ║
+   ║     → nommez-les  01.jpg, 02.jpg, 03.webp …              ║
    ║                                                          ║
    ║  2. Dans le tableau PHOTOS ci-dessous, remplacez        ║
    ║     l'URL Unsplash par le chemin local :                ║
-   ║     'photos/01.jpg'                                      ║
+   ║     'photos/01.webp'                                      ║
    ║                                                          ║
    ║  Les photos Unsplash restent actives tant que            ║
    ║  vous ne les remplacez pas — rien ne casse.             ║
@@ -21,45 +21,45 @@
 
 window.PHOTOS = [
   /* LE CAIRE */
-  /* 00 */ 'photos/20260412_181904.jpg',    /* Nil au crépuscule — Le Caire       */
-  /* 01 */ 'photos/IMG20260413163722.jpg',  /* Masque d'or de Toutankhamon ★★★   */
-  /* 02 */ 'photos/IMG20260413162709.jpg',  /* Sarcophage doré — GEM ★★★         */
-  /* 03 */ 'photos/IMG20260413171940.jpg',  /* Ramsès II — statue GEM atrium ★★  */
-  /* 04 */ 'photos/20260413_160935.jpg',    /* Sarcophages peints — musée         */
-  /* 05 */ 'photos/j2_01.jpg',             /* Pyramides de Gizeh + calèche ★★   */
-  /* 06 */ 'photos/20260413_112056.jpg',    /* Couloir intérieur pyramide         */
+  /* 00 */ 'photos/20260412_181904.webp',    /* Nil au crépuscule — Le Caire       */
+  /* 01 */ 'photos/IMG20260413163722.webp',  /* Masque d'or de Toutankhamon ★★★   */
+  /* 02 */ 'photos/IMG20260413162709.webp',  /* Sarcophage doré — GEM ★★★         */
+  /* 03 */ 'photos/IMG20260413171940.webp',  /* Ramsès II — statue GEM atrium ★★  */
+  /* 04 */ 'photos/20260413_160935.webp',    /* Sarcophages peints — musée         */
+  /* 05 */ 'photos/j2_01.webp',             /* Pyramides de Gizeh + calèche ★★   */
+  /* 06 */ 'photos/20260413_112056.webp',    /* Couloir intérieur pyramide         */
   /* SAQQARA */
-  /* 07 */ 'photos/j3_01.jpg',             /* Pyramide à degrés de Djoser ★      */
-  /* 08 */ 'photos/IMG20260414120536.jpg',  /* Colonnes — Saqqara ★               */
-  /* 09 */ 'photos/j3_02.jpg',             /* Tombes des nobles — Saqqara        */
+  /* 07 */ 'photos/j3_01.webp',             /* Pyramide à degrés de Djoser ★      */
+  /* 08 */ 'photos/IMG20260414120536.webp',  /* Colonnes — Saqqara ★               */
+  /* 09 */ 'photos/j3_02.webp',             /* Tombes des nobles — Saqqara        */
   /* ASSOUAN */
-  /* 10 */ 'photos/IMG20260416184028.jpg',  /* Île de Philæ de nuit ★★★          */
-  /* 11 */ 'photos/IMG20260416185117.jpg',  /* Kiosque de Trajan de nuit ★★       */
-  /* 12 */ 'photos/j6_01.jpg',             /* Felouque sur le Nil ★              */
-  /* 13 */ 'photos/j4_01.jpg',             /* Épices — souk d'Assouan            */
+  /* 10 */ 'photos/IMG20260416184028.webp',  /* Île de Philæ de nuit ★★★          */
+  /* 11 */ 'photos/IMG20260416185117.webp',  /* Kiosque de Trajan de nuit ★★       */
+  /* 12 */ 'photos/j6_01.webp',             /* Felouque sur le Nil ★              */
+  /* 13 */ 'photos/j4_01.webp',             /* Épices — souk d'Assouan            */
   /* ABOU SIMBEL */
-  /* 14 */ 'photos/20260416_075847.jpg',    /* Colosses Abou Simbel — ext. ★     */
-  /* 15 */ 'photos/j5_01.jpg',             /* Abou Simbel — vue générale ★       */
-  /* 16 */ 'photos/20260416_080004.jpg',     /* Statues — intérieur Abou Simbel ★ */
-  /* 17 */ 'photos/20260416_080253.jpg',    /* Sanctuaire — Abou Simbel           */
-  /* 18 */ 'photos/20260416_081205.jpg',    /* Couloir hiéroglyphes Abou Simbel   */
+  /* 14 */ 'photos/20260416_075847.webp',    /* Colosses Abou Simbel — ext. ★     */
+  /* 15 */ 'photos/j5_01.webp',             /* Abou Simbel — vue générale ★       */
+  /* 16 */ 'photos/20260416_080004.webp',     /* Statues — intérieur Abou Simbel ★ */
+  /* 17 */ 'photos/20260416_080253.webp',    /* Sanctuaire — Abou Simbel           */
+  /* 18 */ 'photos/20260416_081205.webp',    /* Couloir hiéroglyphes Abou Simbel   */
   /* CROISIÈRE */
-  /* 19 */ 'photos/20260417_142643.jpg',    /* Colonnes Kom Ombo — détail ★       */
-  /* 20 */ 'photos/IMG20260417152913.jpg',  /* Crocodiles momifiés Kom Ombo ★     */
-  /* 21 */ 'photos/j7_01.jpg',             /* Edfou — pylônes ★                  */
-  /* 22 */ 'photos/j7_02.jpg',             /* Edfou — hiéroglyphes               */
-  /* 23 */ 'photos/20260417_122007.jpg',    /* Pont du bateau + rives du Nil      */
+  /* 19 */ 'photos/20260417_142643.webp',    /* Colonnes Kom Ombo — détail ★       */
+  /* 20 */ 'photos/IMG20260417152913.webp',  /* Crocodiles momifiés Kom Ombo ★     */
+  /* 21 */ 'photos/j7_01.webp',             /* Edfou — pylônes ★                  */
+  /* 22 */ 'photos/j7_02.webp',             /* Edfou — hiéroglyphes               */
+  /* 23 */ 'photos/20260417_122007.webp',    /* Pont du bateau + rives du Nil      */
   /* LOUXOR */
-  /* 24 */ 'photos/20260421_182935.jpg',    /* Temple de Louxor — crépuscule ★★  */
-  /* 25 */ 'photos/j10_03.jpg',            /* Louxor de nuit — coucher soleil    */
-  /* 26 */ 'photos/j8_02.jpg',             /* Obélisque — Karnak ★               */
-  /* 27 */ 'photos/20260422_095721.jpg',    /* Colosses de Memnon ★★             */
-  /* 28 */ 'photos/j11_02.jpg',            /* Vallée des Rois — paysage          */
-  /* 29 */ 'photos/20260418_124834.jpg',    /* Cartouches royaux — hiéroglyphes   */
+  /* 24 */ 'photos/20260421_182935.webp',    /* Temple de Louxor — crépuscule ★★  */
+  /* 25 */ 'photos/j10_03.webp',            /* Louxor de nuit — coucher soleil    */
+  /* 26 */ 'photos/j8_02.webp',             /* Obélisque — Karnak ★               */
+  /* 27 */ 'photos/20260422_095721.webp',    /* Colosses de Memnon ★★             */
+  /* 28 */ 'photos/j11_02.webp',            /* Vallée des Rois — paysage          */
+  /* 29 */ 'photos/20260418_124834.webp',    /* Cartouches royaux — hiéroglyphes   */
   /* MER ROUGE */
-  /* 30 */ 'photos/20260424_102838.jpg',    /* Récif corallien — turquoise ★★    */
-  /* 31 */ 'photos/20260424_122659.jpg',    /* Mer Rouge — étendue bleue          */
-  /* 32 */ 'photos/IMG20260425074047.jpg',  /* Plage de Somabay ★                */
+  /* 30 */ 'photos/20260424_102838.webp',    /* Récif corallien — turquoise ★★    */
+  /* 31 */ 'photos/20260424_122659.webp',    /* Mer Rouge — étendue bleue          */
+  /* 32 */ 'photos/IMG20260425074047.webp',  /* Plage de Somabay ★                */
   /* 33 */ 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80', /* Hublot d'avion — décollage */
 ];
 
@@ -178,42 +178,42 @@ window.ROUTE_ORDER = ['Le Caire','Abou Simbel','Assouan','Croisière Nil','Louxo
 
 window.GODS = [
   {sym:'❂', name:'Ramsès II',      role:'Pharaon divinisé',      epoch:'1279–1213 av. J.-C.',
-   img:'photos/20260416_075847.jpg',
+   img:'photos/20260416_075847.webp',
    text:"Le plus grand pharaon bâtisseur (1279–1213 av. J.-C.). Fils de Séthi Ier, règne 66 ans. Ses constructions couvrent toute l'Égypte. Les quatre statues d'Abou Simbel ont été déplacées de 65m en 1968 pour les sauver des eaux du lac Nasser.",
    detail:"Ramsès II, dit « Ramsès le Grand », règne 66 ans — l'un des plus longs de l'histoire égyptienne. Grand stratège militaire, il mène la bataille de Qadesh contre les Hittites, première bataille de l'histoire documentée par les deux camps, et en fait graver le récit triomphal sur tous ses temples, bien que l'issue ait été indécise.\n\nIl fait construire ou agrandir des dizaines de monuments : Abou Simbel, le Ramesseum, la salle hypostyle de Karnak. Il eut plus de 100 enfants reconnus. Sa momie porte encore les traces d'arthrite sévère et de maladies dentaires. Fait rarissime : lorsqu'elle voyage à Paris en 1976 pour soins de conservation, la momie est dotée d'un passeport officiel égyptien — profession : roi.",
    vu:"Vu à : Abou Simbel · Karnak · Louxor"},
   {sym:'𓂀', name:'Horus',          role:'Dieu faucon',            epoch:'Dieu primordial',
-   img:'photos/horus.png',
+   img:'photos/horus.webp',
    text:"Dieu du ciel, de la royauté et de la protection. Fils d'Osiris et d'Isis. Son œil gauche est la Lune, son œil droit le Soleil. Sa victoire légendaire sur Seth, son oncle, symbolise le triomphe de l'ordre sur le chaos.",
    detail:"Horus est l'une des plus anciennes divinités du panthéon égyptien. Dieu du ciel et de la royauté, il est représenté sous la forme d'un faucon ou d'un homme à tête de faucon portant la double couronne d'Égypte. Fils d'Osiris et d'Isis, il est conçu après la mort de son père.\n\nSa lutte contre Seth — son oncle meurtrier d'Osiris — pour le trône d'Égypte constitue l'un des mythes fondateurs de la civilisation. Lors de ce combat, il perd son œil gauche, qui devient le symbole protecteur « Œil d'Horus » ou Oudjat — amulette portée encore aujourd'hui. Chaque pharaon vivant était considéré comme une incarnation d'Horus ; à sa mort, il devenait Osiris.",
    vu:"Vu à : Edfou · Kom Ombo"},
   {sym:'𓆋', name:'Sobek',          role:'Dieu crocodile',         epoch:'Ancien Empire',
-   img:'photos/sobek.png',
+   img:'photos/sobek.webp',
    text:"Dieu des eaux du Nil, de la fertilité et de la puissance. Redouté et vénéré, il contrôle les crues. Les crocodiles sacrés étaient nourris, parés de bijoux, et momifiés à leur mort.",
    detail:"Sobek, le dieu crocodile, est une divinité ancienne associée aux eaux du Nil et à sa puissance créatrice. Les Égyptiens redoutaient et vénéraient simultanément le crocodile : symbole de fertilité car il annonçait les crues, mais aussi de destruction imprévisible.\n\nÀ Kom Ombo, son temple est partagé avec Horus — symbole de la dualité égyptienne. Les crocodiles sacrés vivaient dans des bassins attenant aux temples, nourris par les prêtres, parés de bijoux et d'amulettes. À leur mort, ils étaient momifiés avec soin. Le musée de Kom Ombo expose des dizaines de crocodiles momifiés, certains encore couverts de leurs ornements. Sobek était aussi invoqué pour se protéger des attaques lors des traversées du Nil.",
    vu:"Vu à : Kom Ombo"},
   {sym:'𓊨', name:'Isis',           role:'Déesse de la magie',     epoch:'Dieu primordial',
-   img:'photos/IMG20260416184028.jpg',
+   img:'photos/IMG20260416184028.webp',
    text:"Déesse de la magie, de la maternité et de la résurrection. Épouse d'Osiris, mère d'Horus. Après l'assassinat d'Osiris par Seth, elle rassemble les morceaux du corps de son mari et le ressuscite magiquement pour concevoir Horus.",
    detail:"Isis est l'une des déesses les plus puissantes du monde antique — son culte s'est étendu jusqu'à Rome et à tout le bassin méditerranéen. Épouse d'Osiris, sœur de Seth et Nephtys, mère d'Horus, elle incarne la maternité divine, la magie et la résurrection.\n\nAprès que Seth eut démembré Osiris et dispersé ses morceaux à travers l'Égypte, Isis les rassembla tous et reconstitua le corps de son époux, lui insufflant une vie suffisante pour concevoir Horus. Ce mythe fonde toute la croyance en la résurrection et le rituel funéraire égyptien. Son temple sur l'île de Philæ, partiellement inondé après la construction du barrage, a été entièrement déplacé bloc par bloc entre 1972 et 1980 — une prouesse archéologique mondiale.",
    vu:"Vu à : Île de Philæ"},
   {sym:'𓁹', name:'Osiris',         role:'Dieu des morts',         epoch:'Dieu primordial',
-   img:'photos/j11_02.jpg',
+   img:'photos/j11_02.webp',
    text:"Dieu de l'au-delà, du jugement des morts et de la renaissance. Premier pharaon mythique d'Égypte. Lors du jugement, le cœur du défunt est pesé contre la plume de Maât. S'il est plus lourd, il est dévoré par Ammout.",
    detail:"Osiris est le premier roi mythique d'Égypte, mort et ressuscité, dieu de l'au-delà et de la renaissance. Assassiné par son frère Seth qui jalouse son règne, il est ressuscité par Isis et devient le souverain du royaume des morts.\n\nDans le Jugement des Âmes, le défunt se présente devant Osiris : son cœur est pesé sur une balance contre la plume de Maât. Si le cœur est plus lourd — alourdi par les fautes —, la créature Ammout (tête de crocodile, corps de lion, arrière-train d'hippopotame) le dévore immédiatement et le défunt cesse d'exister. Si les poids sont égaux, il accède aux Champs d'Ialou, le paradis égyptien. Ce rituel est illustré en détail dans le Livre des Morts.",
    vu:"Vu à : Vallée des Rois · Saqqara"},
   {sym:'☥', name:'Toutankhamon',   role:'Pharaon mystérieux',     epoch:'XVIIIe dynastie, ~1332 av. J.-C.',
-   img:'photos/IMG20260413163722.jpg',
+   img:'photos/IMG20260413163722.webp',
    text:"Pharaon de la XVIIIe dynastie, règne à 9 ans, meurt à 19 ans. Inconnu jusqu'à la découverte de sa tombe intacte par Howard Carter en 1922 — la seule non pillée de la Vallée des Rois. Plus de 5 000 objets y étaient enterrés.",
    detail:"Toutankhamon est le pharaon le plus célèbre du monde, non pour ses accomplissements — il règne à peine dix ans — mais pour son tombeau intact, découvert en 1922 par Howard Carter dans la Vallée des Rois. C'est la seule tombe royale jamais retrouvée non pillée. Plus de 5 000 objets y étaient scellés : le masque funéraire en or massif, quatre sarcophages emboîtés, le trône en bois doré, des chars, des vêtements, de la nourriture.\n\nIl monte sur le trône à 9 ans, probablement fils d'Akhénaton — le pharaon hérétique qui imposa le monothéisme autour du dieu Aton. Toutankhamon rétablit le culte traditionnel des dieux. Mort à 19 ans dans des circonstances encore débattues (chute de cheval, maladie, assassinat?), son nom fut effacé des registres royaux par ses successeurs.",
    vu:"Vu à : Grand Musée · Saqqara · Vallée des Rois"},
   {sym:'𓆄', name:'Maât',           role:'Déesse de la justice',   epoch:'Ancien Empire',
-   img:'photos/20260418_124834.jpg',
+   img:'photos/20260418_124834.webp',
    text:"Déesse de la vérité, de la justice, de l'ordre cosmique — le « Maât ». Concept philosophique autant que divinité : tout pharaon se devait de faire régner le Maât, l'ordre contre le chaos (Isfet). La vie juste, l'harmonie universelle.",
    detail:"Maât est à la fois une déesse et le concept philosophique central de la civilisation égyptienne. Sa plume d'autruche symbolise la vérité, la justice et l'harmonie universelle. Le terme « maât » désigne un état d'ordre cosmique — l'opposé d'Isfet, le chaos.\n\nTout pharaon avait pour devoir sacré de maintenir le maât : rendre une justice équitable, nourrir son peuple, honorer les dieux, maintenir l'équilibre des forces naturelles. Dans le rituel funéraire, c'est sa plume qui sert d'étalon pour peser le cœur des défunts. Représentée comme une femme assise portant une plume sur la tête — parfois ailée — Maât est présente dans chaque temple. Sa simplicité visuelle contraste avec l'immensité de ce qu'elle représente : l'idée même que l'univers obéit à un ordre moral.",
    vu:"Vu à : tous les temples"},
   {sym:'♀', name:'Hatchepsout',    role:'Pharaonne',               epoch:'XVIIIe dynastie, 1479–1458 av. J.-C.',
-   img:'photos/20260421_182935.jpg',
+   img:'photos/20260421_182935.webp',
    text:"L'une des rares femmes à avoir régné comme pharaon (1479–1458 av. J.-C.). Se représentait avec la barbe cérémonielle masculine. Son successeur Thoutmosis III fit effacer son nom et son image après sa mort. Redécouverte au XIXe siècle.",
    detail:"Hatchepsout est l'une des rares femmes de l'histoire égyptienne à avoir exercé le pouvoir suprême avec le titre de pharaon — pas régente, pharaon à part entière. Elle règne 21 ans, l'une des périodes les plus prospères du Nouvel Empire.\n\nElle lance d'ambitieuses expéditions commerciales vers le pays de Pount (actuelle Somalie ou Érythrée), fait construire son temple funéraire à Deir el-Bahari — l'une des architectures les plus élégantes de l'Antiquité — et ériger des obélisques à Karnak. Elle se fait représenter avec la barbe cérémonielle masculine et les insignes royaux, assumant pleinement les codes du pouvoir. Après sa mort, son successeur Thoutmosis III fit effacer méthodiquement son nom et son image de tous les monuments. Redécouverte seulement au XIXe siècle, elle est aujourd'hui reconnue comme l'un des grands souverains de l'histoire.",
    vu:"Vu à : Deir el-Bahari, Louxor"},
