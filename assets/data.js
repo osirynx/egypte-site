@@ -167,12 +167,12 @@ window.BESTOF = [
 ];
 
 window.PLACES = [
-  {name:'Le Caire',     coords:[30.0444,31.2357], days:'Jours 0–4',  desc:"Pyramides, Sphinx, Saqqara, Grand Musée, Zamalek, souk Khân al-Khalili, quartier copte.",      journal:'journal.html#jour-1'},
-  {name:'Abou Simbel',  coords:[22.3372,31.6258], days:'Jour 5',     desc:"Temples de Ramsès II et Néfertari. Réveil à 3h25, 3h de route, majestueux.",                  journal:'journal.html#jour-5'},
-  {name:'Assouan',      coords:[24.0889,32.8998], days:'Jours 4–5',  desc:"Île de Philæ, Île Éléphantine, souk.",                                                         journal:'journal.html#jour-4'},
-  {name:'Croisière Nil',coords:[24.9,32.87],      days:'Jours 6–7',  desc:"Kom Ombo → Edfou → Esna. Navigation paisible sur le Nil.",                                     journal:'journal.html#jour-6'},
-  {name:'Louxor',       coords:[25.6872,32.6396], days:'Jours 8–11', desc:"Karnak, Vallée des Rois, Hatchepsout, temple de Louxor.",                                      journal:'journal.html#jour-8'},
-  {name:'Somabay',      coords:[26.85,33.93],     days:'Jours 12–14',desc:"Mer Rouge. Snorkeling, repos, soleil.",                                                         journal:'journal.html#jour-12'},
+  {name:'Le Caire',     coords:[30.0444,31.2357], days:'Jours 0–4',  desc:"Pyramides, Sphinx, Saqqara, Grand Musée, Zamalek, souk Khân al-Khalili, quartier copte.",      cityPage:'le-caire.html',    journal:'journal.html#jour-1'},
+  {name:'Abou Simbel',  coords:[22.3372,31.6258], days:'Jour 5',     desc:"Temples de Ramsès II et Néfertari. Réveil à 3h25, 3h de route, majestueux.",                  cityPage:'abou-simbel.html', journal:'journal.html#jour-5'},
+  {name:'Assouan',      coords:[24.0889,32.8998], days:'Jours 4–5',  desc:"Île de Philæ, Île Éléphantine, souk.",                                                         cityPage:'assouan.html',     journal:'journal.html#jour-4'},
+  {name:'Croisière Nil',coords:[24.9,32.87],      days:'Jours 6–7',  desc:"Kom Ombo → Edfou → Esna. Navigation paisible sur le Nil.",                                     cityPage:'croisiere.html',   journal:'journal.html#jour-6'},
+  {name:'Louxor',       coords:[25.6872,32.6396], days:'Jours 8–11', desc:"Karnak, Vallée des Rois, Hatchepsout, temple de Louxor.",                                      cityPage:'louxor.html',      journal:'journal.html#jour-8'},
+  {name:'Somabay',      coords:[26.85,33.93],     days:'Jours 12–14',desc:"Mer Rouge. Snorkeling, repos, soleil.",                                                         cityPage:'mer-rouge.html',   journal:'journal.html#jour-12'},
 ];
 window.ROUTE_ORDER = ['Le Caire','Abou Simbel','Assouan','Croisière Nil','Louxor','Somabay'];
 

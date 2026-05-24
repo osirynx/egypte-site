@@ -23,9 +23,23 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <link rel="stylesheet" href="assets/styles.css?v=13"/>
 <style>
+  .pop-btns {display:flex;flex-direction:column;gap:.4rem;margin-top:.6rem}
+  .pop-city-btn {
+    display: inline-block;
+    padding: .25rem .7rem;
+    background: #C9A84C;
+    color: #111;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background .2s;
+  }
+  .pop-city-btn:hover {background: #e0bc5e}
   .pop-journal-btn {
     display: inline-block;
-    margin-top: .6rem;
     padding: .25rem .7rem;
     border: 1px solid #C9A84C;
     color: #C9A84C;
@@ -82,7 +96,7 @@
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="assets/data.js?v=8"></script>
+<script src="assets/data.js?v=12"></script>
 <script src="assets/app.js?v=8"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -110,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       iconAnchor: [9, 9]
     });
     const m = L.marker(p.coords, {icon, alt: p.name}).addTo(map);
-    m.bindPopup(`<span class="pop-day">${p.days}</span><h4>${p.name}</h4><div>${p.desc}</div>${p.journal ? `<a href="${p.journal}" class="pop-journal-btn">Lire le journal →</a>` : ''}`);
+    m.bindPopup(`<span class="pop-day">${p.days}</span><h4>${p.name}</h4><div>${p.desc}</div><div class="pop-btns">${p.cityPage ? `<a href="${p.cityPage}" class="pop-city-btn">En savoir plus →</a>` : ''}${p.journal ? `<a href="${p.journal}" class="pop-journal-btn">Lire le journal →</a>` : ''}</div>`);
   });
 
   const routeCoords = window.ROUTE_ORDER.map(n => placeByName[n].coords);
