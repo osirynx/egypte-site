@@ -10,7 +10,7 @@ function injectShell(activePage) {
 
         <div class="nav-dropdown" id="villesDropdown" role="navigation" aria-label="Villes">
           <button aria-haspopup="true" aria-expanded="false" aria-controls="villesMenu">
-            Villes <span class="dd-arrow" aria-hidden="true">▾</span>
+            Destinations <span class="dd-arrow" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-menu" id="villesMenu" role="menu">
             <a href="le-caire.html"    role="menuitem"><span class="dd-icon">🏛</span>Le Caire</a>
@@ -27,7 +27,7 @@ function injectShell(activePage) {
 
         <div class="nav-dropdown" id="voyageDropdown" role="navigation" aria-label="Le Voyage">
           <button aria-haspopup="true" aria-expanded="false" aria-controls="voyageMenu">
-            Le Voyage <span class="dd-arrow" aria-hidden="true">▾</span>
+            Mon Voyage <span class="dd-arrow" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-menu" id="voyageMenu" role="menu">
             <a href="itineraire.html" data-page="itineraire" role="menuitem"><span class="dd-icon">🗺</span>Itinéraire</a>
@@ -51,11 +51,14 @@ function injectShell(activePage) {
       <nav class="foot-nav" aria-label="Navigation pied de page">
         <a href="index.html">Accueil</a>
         <a href="galerie.html">Galerie</a>
+        <a href="mythologie.html">Mythologie</a>
+        <a href="infos.html">Infos</a>
+      </nav>
+      <div style="font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:.9rem 0 .3rem;opacity:.55">Mon Voyage</div>
+      <nav class="foot-nav" aria-label="Mon Voyage" style="opacity:.75">
         <a href="itineraire.html">Itinéraire</a>
         <a href="journal.html">Journal</a>
         <a href="carte.html">Carte</a>
-        <a href="mythologie.html">Mythologie</a>
-        <a href="infos.html">Infos</a>
       </nav>
       <nav class="foot-nav" aria-label="Villes" style="margin-top:.6rem;opacity:.7">
         <a href="le-caire.html">Le Caire</a>
