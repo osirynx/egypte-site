@@ -67,6 +67,7 @@ function injectShell(activePage) {
       </nav>
       <div class="visitor-counter" id="visitorCounter" aria-live="polite"></div>
       <div class="credit">De Nice au Caire — d'Assouan à la Mer Rouge</div>
+      <p class="foot-affiliate">Ce site contient des liens affiliés. Si vous réservez via ces liens, je perçois une petite commission sans surcoût pour vous.</p>
     </footer>`;
 
   document.body.insertAdjacentHTML('afterbegin', navHTML);

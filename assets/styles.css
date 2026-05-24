@@ -331,6 +331,7 @@ footer .logo{font-family:var(--serif);font-size:1.8rem;color:var(--gold);letter-
 footer .sub{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text-light);margin-top:.8rem;opacity:.7}
 footer .visitor-counter{font-family:var(--serif);font-size:.9rem;color:var(--gold);letter-spacing:.2em;margin-top:1.4rem;font-style:italic;min-height:1.4em}
 footer .credit{font-size:.6rem;color:var(--smoke);margin-top:.8rem;letter-spacing:.18em;text-transform:uppercase}
+footer .foot-affiliate{font-size:.58rem;color:var(--smoke);margin-top:1.4rem;line-height:1.6;max-width:480px;text-align:center}
 footer .foot-nav{display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap;margin-top:1.6rem}
 footer .foot-nav a{font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--text-light);transition:color .3s}
 footer .foot-nav a:hover{color:var(--gold)}
