@@ -4,40 +4,41 @@
 function injectShell(activePage) {
   const navHTML = `
     <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
-      <a href="index.html" class="nav-logo" aria-label="Accueil — Égypte MMXXVI">ÉGYPTE<span>·</span>MMXXVI</a>
+      <a href="/" class="nav-logo" aria-label="Accueil — Égypte MMXXVI">ÉGYPTE<span>·</span>MMXXVI</a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html" data-page="home" aria-label="Accueil">Accueil</a>
+        <a href="/" data-page="home" aria-label="Accueil">Accueil</a>
 
         <div class="nav-dropdown" id="villesDropdown" role="navigation" aria-label="Villes">
           <button aria-haspopup="true" aria-expanded="false" aria-controls="villesMenu">
             Destinations <span class="dd-arrow" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-menu" id="villesMenu" role="menu">
-            <a href="le-caire.html"    role="menuitem"><span class="dd-icon">🏛</span>Le Caire</a>
-            <a href="assouan.html"     role="menuitem"><span class="dd-icon">⛵</span>Assouan</a>
-            <a href="louxor.html"      role="menuitem"><span class="dd-icon">𓂀</span>Louxor</a>
-            <a href="abou-simbel.html" role="menuitem"><span class="dd-icon">❂</span>Abou Simbel</a>
+            <a href="/le-caire.html"    role="menuitem"><span class="dd-icon">🏛</span>Le Caire</a>
+            <a href="/assouan.html"     role="menuitem"><span class="dd-icon">⛵</span>Assouan</a>
+            <a href="/louxor.html"      role="menuitem"><span class="dd-icon">𓂀</span>Louxor</a>
+            <a href="/abou-simbel.html" role="menuitem"><span class="dd-icon">❂</span>Abou Simbel</a>
             <div class="dd-sep" role="separator"></div>
-            <a href="croisiere.html"   role="menuitem"><span class="dd-icon">🚢</span>Croisière Nil</a>
-            <a href="mer-rouge.html"   role="menuitem"><span class="dd-icon">🐠</span>Mer Rouge</a>
+            <a href="/croisiere.html"   role="menuitem"><span class="dd-icon">🚢</span>Croisière Nil</a>
+            <a href="/mer-rouge.html"   role="menuitem"><span class="dd-icon">🐠</span>Mer Rouge</a>
           </div>
         </div>
 
-        <a href="galerie.html" data-page="galerie" aria-label="Galerie">Galerie</a>
+        <a href="/galerie.html" data-page="galerie" aria-label="Galerie">Galerie</a>
+        <a href="/blog/" data-page="blog" aria-label="Guides pratiques">Guides</a>
 
         <div class="nav-dropdown" id="voyageDropdown" role="navigation" aria-label="Le Voyage">
           <button aria-haspopup="true" aria-expanded="false" aria-controls="voyageMenu">
             Mon Voyage <span class="dd-arrow" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-menu" id="voyageMenu" role="menu">
-            <a href="itineraire.html" data-page="itineraire" role="menuitem"><span class="dd-icon">🗺</span>Itinéraire</a>
-            <a href="journal.html"    data-page="journal"    role="menuitem"><span class="dd-icon">📖</span>Journal</a>
-            <a href="carte.html"      data-page="carte"      role="menuitem"><span class="dd-icon">📍</span>Carte interactive</a>
+            <a href="/itineraire.html" data-page="itineraire" role="menuitem"><span class="dd-icon">🗺</span>Itinéraire</a>
+            <a href="/journal.html"    data-page="journal"    role="menuitem"><span class="dd-icon">📖</span>Journal</a>
+            <a href="/carte.html"      data-page="carte"      role="menuitem"><span class="dd-icon">📍</span>Carte interactive</a>
           </div>
         </div>
 
-        <a href="mythologie.html" data-page="mythologie" aria-label="Mythologie">Mythologie</a>
-        <a href="infos.html"      data-page="infos"      aria-label="Infos pratiques">Infos</a>
+        <a href="/mythologie.html" data-page="mythologie" aria-label="Mythologie">Mythologie</a>
+        <a href="/infos.html"      data-page="infos"      aria-label="Infos pratiques">Infos</a>
       </div>
       <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -55,31 +56,32 @@ function injectShell(activePage) {
       <div class="foot-col">
         <div class="foot-col-title">Destinations</div>
         <nav aria-label="Destinations">
-          <a href="le-caire.html"><span class="foot-icon">🏛</span>Le Caire</a>
-          <a href="assouan.html"><span class="foot-icon">⛵</span>Assouan</a>
-          <a href="louxor.html"><span class="foot-icon">𓂀</span>Louxor</a>
-          <a href="abou-simbel.html"><span class="foot-icon">❂</span>Abou Simbel</a>
-          <a href="croisiere.html"><span class="foot-icon">🚢</span>Croisière Nil</a>
-          <a href="mer-rouge.html"><span class="foot-icon">🐠</span>Mer Rouge</a>
+          <a href="/le-caire.html"><span class="foot-icon">🏛</span>Le Caire</a>
+          <a href="/assouan.html"><span class="foot-icon">⛵</span>Assouan</a>
+          <a href="/louxor.html"><span class="foot-icon">𓂀</span>Louxor</a>
+          <a href="/abou-simbel.html"><span class="foot-icon">❂</span>Abou Simbel</a>
+          <a href="/croisiere.html"><span class="foot-icon">🚢</span>Croisière Nil</a>
+          <a href="/mer-rouge.html"><span class="foot-icon">🐠</span>Mer Rouge</a>
         </nav>
       </div>
 
       <div class="foot-col">
         <div class="foot-col-title">Guides & Ressources</div>
         <nav aria-label="Guides">
-          <a href="mythologie.html"><span class="foot-icon">𓆣</span>Mythologie égyptienne</a>
-          <a href="infos.html"><span class="foot-icon">📋</span>Infos pratiques</a>
-          <a href="galerie.html"><span class="foot-icon">📸</span>Galerie photos</a>
+          <a href="/blog/"><span class="foot-icon">💰</span>Budget voyage Égypte</a>
+          <a href="/mythologie.html"><span class="foot-icon">𓆣</span>Mythologie égyptienne</a>
+          <a href="/infos.html"><span class="foot-icon">📋</span>Infos pratiques</a>
+          <a href="/galerie.html"><span class="foot-icon">📸</span>Galerie photos</a>
         </nav>
       </div>
 
       <div class="foot-col">
         <div class="foot-col-title">Mon Voyage</div>
         <nav aria-label="Mon Voyage">
-          <a href="itineraire.html"><span class="foot-icon">🗺</span>Itinéraire jour par jour</a>
-          <a href="journal.html"><span class="foot-icon">📖</span>Journal de bord</a>
-          <a href="carte.html"><span class="foot-icon">📍</span>Carte interactive</a>
-          <a href="index.html"><span class="foot-icon">⌂</span>Accueil</a>
+          <a href="/itineraire.html"><span class="foot-icon">🗺</span>Itinéraire jour par jour</a>
+          <a href="/journal.html"><span class="foot-icon">📖</span>Journal de bord</a>
+          <a href="/carte.html"><span class="foot-icon">📍</span>Carte interactive</a>
+          <a href="/"><span class="foot-icon">⌂</span>Accueil</a>
         </nav>
       </div>
     </div>

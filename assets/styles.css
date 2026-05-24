@@ -188,6 +188,32 @@ section{padding:7rem 6vw;position:relative}
 .intro p{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--text-light);line-height:1.55;margin-top:1.6rem}
 
 /* ============================================================
+   INDEX — GUIDES PRATIQUES section
+   ============================================================ */
+.guides-section{padding:6rem 6vw 7rem;background:rgba(26,20,14,.5);border-top:1px solid rgba(201,168,76,.08)}
+.guides-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;max-width:1100px;margin:0 auto}
+.guide-card{
+  display:block;background:var(--obsidian-mid);border:1px solid rgba(201,168,76,.12);
+  overflow:hidden;transition:border-color .4s ease,transform .35s ease;text-decoration:none;
+  display:flex;flex-direction:column;
+}
+.guide-card:hover{border-color:rgba(201,168,76,.42);transform:translateY(-3px)}
+.guide-card-img{
+  aspect-ratio:16/9;background-size:cover;background-position:center;
+  filter:saturate(1.1) brightness(.78) sepia(.08);
+  transition:transform .9s ease,filter .9s ease;
+  flex-shrink:0;
+}
+.guide-card:hover .guide-card-img{transform:scale(1.04);filter:saturate(1.25) brightness(.85) sepia(.04)}
+.guide-card-body{padding:1.8rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.guide-card-title{font-family:var(--serif);font-size:1.5rem;color:var(--ivory);font-weight:400;margin-bottom:.75rem;line-height:1.15}
+.guide-card-title i{color:var(--gold-light)}
+.guide-card-desc{font-size:.8rem;line-height:1.75;color:var(--text-light);flex:1}
+.guide-card-more{display:inline-block;margin-top:1.2rem;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:.2rem;transition:border-color .25s}
+.guide-card:hover .guide-card-more{border-color:var(--gold)}
+@media(max-width:680px){.guides-grid{grid-template-columns:1fr}}
+
+/* ============================================================
    ITINERAIRE
    ============================================================ */
 .timeline{position:relative;max-width:1100px;margin:0 auto;padding:1rem 0}
