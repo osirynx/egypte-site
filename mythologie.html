@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-<link rel="stylesheet" href="assets/styles.css?v=13"/>
+<link rel="stylesheet" href="assets/styles.css?v=14"/>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHZ4902E1E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DHZ4902E1E');</script></head>
@@ -46,6 +46,7 @@
 <div class="myth-panel" id="mythPanel" role="dialog" aria-modal="true" aria-labelledby="mythPanelTitle">
   <span class="myth-panel-handle" aria-hidden="true"></span>
   <button class="myth-panel-close" id="mythPanelClose" aria-label="Fermer">✕</button>
+  <div class="myth-panel-content">
   <img class="myth-panel-img" id="mythPanelImg" alt="">
   <div class="myth-panel-body">
     <span class="eyebrow" id="mythPanelRole"></span>
@@ -54,9 +55,10 @@
     <p class="myth-panel-detail" id="mythPanelDetail"></p>
     <span class="myth-panel-vu" id="mythPanelVu"></span>
   </div>
+  </div>
 </div>
 
-<script src="assets/data.js?v=10"></script>
+<script src="assets/data.js?v=11"></script>
 <script src="assets/app.js?v=8"></script>
 <script>
 const mg = document.getElementById('mythoGrid');
