@@ -45,33 +45,51 @@ function injectShell(activePage) {
     </nav>`;
 
   const footHTML = `
-    <footer role="contentinfo">
-      <div class="logo">Égypte · MMXXVI</div>
-      <div class="sub">14 jours sur les terres des pharaons · Avril 2026</div>
-      <nav class="foot-nav" aria-label="Navigation pied de page">
-        <a href="index.html">Accueil</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="mythologie.html">Mythologie</a>
-        <a href="infos.html">Infos</a>
-      </nav>
-      <div style="font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:.9rem 0 .3rem;opacity:.55">Mon Voyage</div>
-      <nav class="foot-nav" aria-label="Mon Voyage" style="opacity:.75">
-        <a href="itineraire.html">Itinéraire</a>
-        <a href="journal.html">Journal</a>
-        <a href="carte.html">Carte</a>
-      </nav>
-      <nav class="foot-nav" aria-label="Villes" style="margin-top:.6rem;opacity:.7">
-        <a href="le-caire.html">Le Caire</a>
-        <a href="assouan.html">Assouan</a>
-        <a href="louxor.html">Louxor</a>
-        <a href="abou-simbel.html">Abou Simbel</a>
-        <a href="croisiere.html">Croisière Nil</a>
-        <a href="mer-rouge.html">Mer Rouge</a>
-      </nav>
+  <footer role="contentinfo">
+    <div class="foot-brand">
+      <div class="foot-logo">Égypte · MMXXVI</div>
+      <div class="foot-tagline">Temples, Nil & Mer Rouge · Avril 2026</div>
+    </div>
+
+    <div class="foot-columns">
+      <div class="foot-col">
+        <div class="foot-col-title">Destinations</div>
+        <nav aria-label="Destinations">
+          <a href="le-caire.html"><span class="foot-icon">🏛</span>Le Caire</a>
+          <a href="assouan.html"><span class="foot-icon">⛵</span>Assouan</a>
+          <a href="louxor.html"><span class="foot-icon">𓂀</span>Louxor</a>
+          <a href="abou-simbel.html"><span class="foot-icon">❂</span>Abou Simbel</a>
+          <a href="croisiere.html"><span class="foot-icon">🚢</span>Croisière Nil</a>
+          <a href="mer-rouge.html"><span class="foot-icon">🐠</span>Mer Rouge</a>
+        </nav>
+      </div>
+
+      <div class="foot-col">
+        <div class="foot-col-title">Guides & Ressources</div>
+        <nav aria-label="Guides">
+          <a href="mythologie.html"><span class="foot-icon">𓆣</span>Mythologie égyptienne</a>
+          <a href="infos.html"><span class="foot-icon">📋</span>Infos pratiques</a>
+          <a href="galerie.html"><span class="foot-icon">📸</span>Galerie photos</a>
+        </nav>
+      </div>
+
+      <div class="foot-col">
+        <div class="foot-col-title">Mon Voyage</div>
+        <nav aria-label="Mon Voyage">
+          <a href="itineraire.html"><span class="foot-icon">🗺</span>Itinéraire jour par jour</a>
+          <a href="journal.html"><span class="foot-icon">📖</span>Journal de bord</a>
+          <a href="carte.html"><span class="foot-icon">📍</span>Carte interactive</a>
+          <a href="index.html"><span class="foot-icon">⌂</span>Accueil</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
       <div class="visitor-counter" id="visitorCounter" aria-live="polite"></div>
-      <div class="credit">De Nice au Caire — d'Assouan à la Mer Rouge</div>
+      <div class="foot-credit">De Nice au Caire — d'Assouan à la Mer Rouge</div>
       <p class="foot-affiliate">Ce site contient des liens affiliés. Si vous réservez via ces liens, je perçois une petite commission sans surcoût pour vous.</p>
-    </footer>`;
+    </div>
+  </footer>`;
 
   document.body.insertAdjacentHTML('afterbegin', navHTML);
   document.body.insertAdjacentHTML('beforeend', footHTML);
