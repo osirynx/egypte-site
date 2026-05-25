@@ -560,6 +560,9 @@ footer .foot-nav a:hover{color:var(--gold)}
 @media (max-width:580px){.sites-grid{grid-template-columns:1fr}}
 
 /* City practical info */
+.blog-contact{padding:2rem 6vw;text-align:center;border-top:1px solid rgba(201,168,76,.08)}
+.blog-contact p{font-size:.82rem;color:var(--text-light);opacity:.75}
+.blog-contact a{color:var(--gold);text-underline-offset:3px}
 .gyg-section{padding:3.5rem 6vw;background:var(--obsidian);border-top:1px solid rgba(201,168,76,.08);text-align:center}
 .gyg-section .eyebrow{margin-bottom:.9rem}
 .gyg-desc{font-size:.78rem;color:var(--text-light);opacity:.7;margin:.6rem auto 1.6rem;max-width:480px;line-height:1.65}
