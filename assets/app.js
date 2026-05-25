@@ -72,6 +72,7 @@ function injectShell(activePage) {
           <a href="/mythologie.html"><span class="foot-icon">𓆣</span>Mythologie égyptienne</a>
           <a href="/infos.html"><span class="foot-icon">📋</span>Infos pratiques</a>
           <a href="/galerie.html"><span class="foot-icon">📸</span>Galerie photos</a>
+          <a href="mailto:osirynx@gmail.com"><span class="foot-icon">✉</span>Contact</a>
         </nav>
       </div>
 
