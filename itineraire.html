@@ -32,28 +32,85 @@
   </section>
 
   <section style="padding-top:3rem" aria-label="Timeline du voyage">
-    <div class="timeline" id="timeline" role="list"></div>
+    <div class="timeline" id="timeline" role="list">
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-0" aria-label="Nice → Le Caire — 11 Avril">
+      <span class="day-no">Jour 0</span>
+      <h2 class="place">Nice → Le Caire</h2>
+      <span class="date">11 Avril</span>
+      <p class="summary">Départ de Nice (Lufthansa via Francfort). Arrivée au Caire à 3h du matin. Le patron de l'hôtel nous accueille avec jus et chocolats.</p>
+    </a>
+  </div>
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-1" aria-label="Le Caire — 12–15 Avril">
+      <span class="day-no">Jours 1–4</span>
+      <h2 class="place">Le Caire</h2>
+      <span class="date">12–15 Avril</span>
+      <p class="summary">Quartier copte, souk Khân al-Khalili, Pyramides de Gizeh, Sphinx en chameau, Saqqara, Grand Musée Égyptien, Zamalek.</p>
+    </a>
+  </div>
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-4" aria-label="Le Caire → Assouan — 15 Avril">
+      <span class="day-no">Jour 4</span>
+      <h2 class="place">Le Caire → Assouan</h2>
+      <span class="date">15 Avril</span>
+      <p class="summary">Vol Air Cairo. Arrivée dans le « vrai Sud ». Arrivée dans un petit quartier authentique. Souk d'Assouan.</p>
+    </a>
+  </div>
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-5" aria-label="Assouan · Abou Simbel — 16 Avril">
+      <span class="day-no">Jour 5</span>
+      <h2 class="place">Assouan · Abou Simbel</h2>
+      <span class="date">16 Avril</span>
+      <p class="summary">Réveil à 3h25. Minibus pour Abou Simbel. Temple de Ramsès II et Néfertari. Île de Philæ de nuit. Île Éléphantine, dîner nubien en rooftop.</p>
+    </a>
+  </div>
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-6" aria-label="Croisière sur le Nil — 17–18 Avril">
+      <span class="day-no">Jours 6–7</span>
+      <h2 class="place">Croisière sur le Nil</h2>
+      <span class="date">17–18 Avril</span>
+      <p class="summary">Bateau magnifique avec mini-pont sur l'eau. Kom Ombo, carrières de grès, temple d'Horus à Edfou — le mieux conservé d'Égypte.</p>
+    </a>
+  </div>
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-8" aria-label="Louxor — 19–22 Avril">
+      <span class="day-no">Jours 8–11</span>
+      <h2 class="place">Louxor</h2>
+      <span class="date">19–22 Avril</span>
+      <p class="summary">Karnak, Temple d'Hatchepsout, Temple de Louxor de nuit, Vallée des Rois, Colosses de Memnon.</p>
+    </a>
+  </div>
+
+  <div class="tl-item reveal" role="listitem">
+    <div class="dot" aria-hidden="true"></div>
+    <a class="card" href="journal.html#jour-12" aria-label="Somabay · Mer Rouge — 23–25 Avril">
+      <span class="day-no">Jours 12–14</span>
+      <h2 class="place">Somabay · Mer Rouge</h2>
+      <span class="date">23–25 Avril</span>
+      <p class="summary">Repos total. Snorkeling, baignade. Buffets. Récupération bien méritée avant le retour.</p>
+    </a>
+  </div>
+
+</div>
   </section>
 </main>
 
 <script src="assets/data.js?v=8"></script>
 <script src="assets/app.js?v=8"></script>
 <script>
-const tl = document.getElementById('timeline');
-window.TIMELINE.forEach(it => {
-  const el = document.createElement('div');
-  el.className = 'tl-item reveal';
-  el.setAttribute('role', 'listitem');
-  el.innerHTML = `
-    <div class="dot" aria-hidden="true"></div>
-    <a class="card" href="journal.html#${it.target}" aria-label="${it.place} — ${it.date}">
-      <span class="day-no">${it.n}</span>
-      <h2 class="place">${it.place}</h2>
-      <span class="date">${it.date}</span>
-      <p class="summary">${it.sum}</p>
-    </a>`;
-  tl.appendChild(el);
-});
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     document.querySelectorAll('.tl-item.reveal').forEach(el => {
