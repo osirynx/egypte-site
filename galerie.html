@@ -54,7 +54,9 @@
 <script src="assets/app.js?v=8"></script>
 <script>
 const masonry = document.getElementById('masonry');
+const GALERIE_EXCLUDE = new Set([35, 36]);
 window.PHOTOS.forEach((p, i) => {
+  if (GALERIE_EXCLUDE.has(i)) return;
   const el = document.createElement('div');
   el.className = 'm-item';
   el.dataset.img = i;
