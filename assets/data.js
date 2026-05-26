@@ -50,7 +50,7 @@ window.PHOTOS = [
   /* 22 */ 'photos/j7_02.webp',             /* Edfou — hiéroglyphes               */
   /* 23 */ 'photos/20260417_122007.webp',    /* Pont du bateau + rives du Nil      */
   /* LOUXOR */
-  /* 24 */ 'photos/20260421_182935.webp',    /* Temple de Louxor — crépuscule ★★  */
+  /* 24 */ 'photos/20260421_182935.webp',    /* Temple de Louxor — coucher de soleil ★★ */
   /* 25 */ 'photos/j10_03.webp',            /* Louxor de nuit — coucher soleil    */
   /* 26 */ 'photos/j8_02.webp',             /* Obélisque — Karnak ★               */
   /* 27 */ 'photos/20260422_095721.webp',    /* Colosses de Memnon ★★             */
@@ -160,7 +160,7 @@ window.DAYS = [
 window.BESTOF = [
   {n:'01', t:"Masque d'or de Toutankhamon",    d:'Jour 2',  img:1},
   {n:'02', t:"Île de Philæ de nuit",           d:'Jour 5',  img:10},
-  {n:'03', t:'Temple de Louxor au crépuscule', d:'Jour 10', img:24},
+  {n:'03', t:'Coucher de soleil — Temple de Louxor', d:'Jour 10', img:24},
   {n:'04', t:"Les colosses d'Abou Simbel",     d:'Jour 5',  img:14},
   {n:'05', t:'Pyramides de Gizeh',             d:'Jour 2',  img:5},
   {n:'06', t:'Sarcophage doré — GEM',          d:'Jour 2',  img:2},
