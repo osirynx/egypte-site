@@ -67,86 +67,67 @@
       <h2>Explorer <i>l'Égypte</i></h2>
       <div class="section-line" aria-hidden="true"></div>
     </div>
-    <div class="explorer-grid" id="explorerGrid"></div>
+    <div class="explorer-grid" id="explorerGrid">
+  <a class="ex-card reveal" href="le-caire.html" aria-label="Destinations — Guides de voyage complets : Le Caire, Louxor, Assouan, Abou Simbel, croisière sur le Nil, Mer Rouge.">
+    <div class="bg" style="background-image:url('photos/j2_01.webp')" aria-hidden="true"></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="body">
+      <span class="num">I</span>
+      <div class="ttl"><i>Destinations</i></div>
+      <p class="desc">Guides de voyage complets : Le Caire, Louxor, Assouan, Abou Simbel, croisière sur le Nil, Mer Rouge.</p>
+    </div>
+  </a>
+  <a class="ex-card reveal" href="blog/index.html" aria-label="Les Guides — Articles et retours d'expérience : choisir son hébergement, gérer son budget, éviter les pièges du tourisme.">
+    <div class="bg" style="background-image:url('photos/karnak.webp')" aria-hidden="true"></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="body">
+      <span class="num">II</span>
+      <div class="ttl">Les <i>Guides</i></div>
+      <p class="desc">Articles et retours d'expérience : choisir son hébergement, gérer son budget, éviter les pièges du tourisme.</p>
+    </div>
+  </a>
+  <a class="ex-card reveal" href="infos.html" aria-label="Infos pratiques — Chiffres clés, procédures et check-lists : monnaie, santé, communications, météo.">
+    <div class="bg" style="background-image:url('photos/infos-pratiques.webp')" aria-hidden="true"></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="body">
+      <span class="num">III</span>
+      <div class="ttl">Infos <i>pratiques</i></div>
+      <p class="desc">Chiffres clés, procédures et check-lists : monnaie, santé, communications, météo — prêt en 5 minutes.</p>
+    </div>
+  </a>
+  <a class="ex-card reveal" href="mythologie.html" aria-label="La Mythologie — Les dieux et déesses de l'Égypte antique.">
+    <div class="bg" style="background-image:url('photos/mythologie-gemini.webp')" aria-hidden="true"></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="body">
+      <span class="num">IV</span>
+      <div class="ttl">La <i>Mythologie</i></div>
+      <p class="desc">Les dieux et déesses de l'Égypte antique — Osiris, Isis, Horus, Anubis, Râ et les autres.</p>
+    </div>
+  </a>
+  <a class="ex-card reveal" href="journal.html" aria-label="Mon Voyage — Le journal et l'itinéraire complets — 14 jours.">
+    <div class="bg" style="background-image:url('photos/20260417_122007.webp')" aria-hidden="true"></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="body">
+      <span class="num">V</span>
+      <div class="ttl">Mon <i>Voyage</i></div>
+      <p class="desc">Le journal et l'itinéraire complets — 14 jours, du Caire à la Mer Rouge, racontés jour par jour.</p>
+    </div>
+  </a>
+  <a class="ex-card reveal" href="galerie.html" aria-label="La Galerie — Les plus belles photos du voyage.">
+    <div class="bg" style="background-image:url('photos/20260424_102838.webp')" aria-hidden="true"></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="body">
+      <span class="num">VI</span>
+      <div class="ttl">La <i>Galerie</i></div>
+      <p class="desc">Les plus belles photos du voyage — temples, désert, Nil et Mer Rouge.</p>
+    </div>
+  </a>
+</div>
   </section>
 
 </main>
 
-<script src="assets/data.js?v=8"></script>
-<script src="assets/app.js?v=8"></script>
-<script>
-const SECTIONS = [
-  {
-    n:'I',
-    t:"<i>Destinations</i>",
-    d:"Guides de voyage complets : Le Caire, Louxor, Assouan, Abou Simbel, croisière sur le Nil, Mer Rouge.",
-    href:'le-caire.html',
-    img:5
-  },
-  {
-    n:'II',
-    t:"Les <i>Guides</i>",
-    d:"Articles et retours d'expérience : choisir son hébergement, gérer son budget, éviter les pièges du tourisme.",
-    href:'blog/index.html',
-    img:34
-  },
-  {
-    n:'III',
-    t:"Infos <i>pratiques</i>",
-    d:"Chiffres clés, procédures et check-lists : monnaie, santé, communications, météo — prêt en 5 minutes.",
-    href:'infos.html',
-    img:36
-  },
-  {
-    n:'IV',
-    t:"La <i>Mythologie</i>",
-    d:"Les dieux et déesses de l'Égypte antique — Osiris, Isis, Horus, Anubis, Râ et les autres.",
-    href:'mythologie.html',
-    img:35
-  },
-  {
-    n:'V',
-    t:"Mon <i>Voyage</i>",
-    d:"Le journal et l'itinéraire complets — 14 jours, du Caire à la Mer Rouge, racontés jour par jour.",
-    href:'journal.html',
-    img:23
-  },
-  {
-    n:'VI',
-    t:"La <i>Galerie</i>",
-    d:"Les plus belles photos du voyage — temples, désert, Nil et Mer Rouge.",
-    href:'galerie.html',
-    img:30
-  },
-];
-
-const eg = document.getElementById('explorerGrid');
-SECTIONS.forEach(s => {
-  const a = document.createElement('a');
-  a.className = 'ex-card reveal';
-  a.href = s.href;
-  a.setAttribute('aria-label', s.t.replace(/<[^>]+>/g, '') + ' — ' + s.d);
-  a.innerHTML = `
-    <div class="bg" style="background-image:url('${window.PHOTOS[s.img]}')" aria-hidden="true"></div>
-    <div class="arrow" aria-hidden="true">→</div>
-    <div class="body">
-      <span class="num">${s.n}</span>
-      <div class="ttl">${s.t}</div>
-      <p class="desc">${s.d}</p>
-    </div>`;
-  eg.appendChild(a);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    document.querySelectorAll('.ex-card.reveal').forEach(el => {
-      const io = new IntersectionObserver(es => {
-        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.disconnect(); } });
-      }, {threshold: .12});
-      io.observe(el);
-    });
-  }, 50);
-});
-</script>
+<script src="assets/data.js?v=8" defer></script>
+<script src="assets/app.js?v=8" defer></script>
 </body>
 </html>
