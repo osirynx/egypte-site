@@ -2,6 +2,19 @@
   "github": {
     "enabled": true
   },
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "egypte-mmxxvi.vercel.app"
+        }
+      ],
+      "destination": "https://egypte.osirynx.com/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
