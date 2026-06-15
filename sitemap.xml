@@ -87,6 +87,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://egypte.osirynx.com/blog/grand-musee-egyptien-le-caire.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://egypte.osirynx.com/blog/budget-voyage-egypte-2-semaines.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
