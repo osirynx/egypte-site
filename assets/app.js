@@ -1,4 +1,4 @@
-/* Shared shell: nav, reveal, lightbox, footer, analytics, visitor counter */
+/* Shared shell: nav, reveal, lightbox, footer, analytics */
 
 /* -------- NAV + FOOTER -------- */
 function injectShell(activePage) {
@@ -88,7 +88,6 @@ function injectShell(activePage) {
     </div>
 
     <div class="foot-bottom">
-      <div class="visitor-counter" id="visitorCounter" aria-live="polite"></div>
       <div class="foot-credit">De Nice au Caire — d'Assouan à la Mer Rouge</div>
       <p class="foot-affiliate">Ce site contient des liens affiliés. Si vous réservez via ces liens, je perçois une petite commission sans surcoût pour vous.</p>
     </div>
@@ -255,36 +254,6 @@ function initAnalytics() {
   gtag('config', id, { anonymize_ip: true });
 }
 
-/* -------- VISITOR COUNTER -------- */
-function initCounter() {
-  const el = document.getElementById('visitorCounter');
-  if (!el) return;
-
-  const SESSION_KEY = 'egypte_counted';
-  const alreadyCounted = sessionStorage.getItem(SESSION_KEY);
-
-  function displayCount(n) {
-    if (n === null || n === undefined) return;
-    const formatted = Number(n).toLocaleString('fr-FR');
-    el.textContent = `— ${formatted} visite${Number(n) > 1 ? 's' : ''} —`;
-  }
-
-  if (!alreadyCounted) {
-    fetch('/api/count', { method: 'POST' })
-      .then(r => r.json())
-      .then(data => {
-        sessionStorage.setItem(SESSION_KEY, '1');
-        displayCount(data.count);
-      })
-      .catch(() => {});
-  } else {
-    fetch('/api/count')
-      .then(r => r.json())
-      .then(data => displayCount(data.count))
-      .catch(() => {});
-  }
-}
-
 /* -------- INIT -------- */
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page || 'home';
@@ -292,5 +261,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initLightbox();
   initAnalytics();
-  initCounter();
 });
