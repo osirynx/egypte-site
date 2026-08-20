@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://egypte-mmxxvi.vercel.app/sitemap.xml
+Sitemap: https://egypte.osirynx.com/sitemap.xml
