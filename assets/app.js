@@ -1,5 +1,18 @@
 /* Shared shell: nav, reveal, lightbox, footer, analytics */
 
+/* ============================================================
+   VERSION DU SITE — SOURCE DE VERITE UNIQUE
+   ------------------------------------------------------------
+   Affichee en bas de chaque page via le footer genere ci-dessous.
+   A incrementer AVANT chaque commit deploye, puis taguer :
+     git tag -a v1.0.0 -m "..." && git push origin v1.0.0
+   Semantique retenue :
+     MAJEUR  refonte structurelle / changement de navigation
+     MINEUR  nouvel article, nouvelle page, nouvelle fonctionnalite
+     PATCH   correction de contenu, de lien, de style
+   ============================================================ */
+const SITE_VERSION = '1.0.0';
+
 /* -------- NAV + FOOTER -------- */
 function injectShell(activePage) {
   const navHTML = `
@@ -90,6 +103,7 @@ function injectShell(activePage) {
     <div class="foot-bottom">
       <div class="foot-credit">De Nice au Caire — d'Assouan à la Mer Rouge</div>
       <p class="foot-affiliate">Ce site contient des liens affiliés. Si vous réservez via ces liens, je perçois une petite commission sans surcoût pour vous.</p>
+      <div class="foot-version">v${SITE_VERSION}</div>
     </div>
   </footer>`;
 

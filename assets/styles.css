@@ -861,6 +861,13 @@ footer {
   padding-top: 1.8rem;
   margin-top: .5rem;
 }
+.foot-version {
+  font-size: .55rem;
+  letter-spacing: .16em;
+  opacity: .22;
+  margin-top: 1.4rem;
+  font-variant-numeric: tabular-nums;
+}
 .foot-credit {
   font-size: .6rem;
   letter-spacing: .18em;
