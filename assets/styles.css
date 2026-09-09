@@ -887,6 +887,15 @@ body[data-slug="croisiere"] .city-hero-inner .eyebrow{
   letter-spacing:.22em;
   font-weight:400;
 }
+body[data-slug="croisiere"] .gyg-section .eyebrow{
+  font-size:1.15rem;
+  letter-spacing:.3em;
+  font-weight:400;
+  color:var(--gold-light);
+}
+body[data-slug="croisiere"] .gyg-section .section-line{
+  opacity:.7;
+}
 body[data-slug="croisiere"] .gyg-desc{
   font-size:1rem;
   opacity:.85;
