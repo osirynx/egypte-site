@@ -85,12 +85,13 @@ section{padding:7rem 6vw;position:relative}
   border-bottom:1px solid rgba(201,168,76,.08);
 }
 .page-head h1{font-size:clamp(2.4rem,5.5vw,4.4rem);margin:1rem 0 .5rem;font-weight:300}
-.page-head .lead{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--text-light);max-width:640px;margin:1.25rem auto 0;line-height:1.6}
+.page-head .lead{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--text-light);max-width:640px;margin:1.25rem auto 0;line-height:1.7}
+.page-head .eyebrow{font-size:.9rem;letter-spacing:.3em;font-weight:400}
 .page-head .section-line{margin-top:1.4rem}
 
 .back-link{
   position:absolute;top:6.5rem;left:6vw;
-  font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--text-light);
+  font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text-light);
   display:inline-flex;align-items:center;gap:.6rem;transition:color .3s;
 }
 .back-link:hover{color:var(--gold)}
@@ -503,7 +504,7 @@ footer .foot-nav a:hover{color:var(--gold)}
   max-width:1280px;margin:0 auto;width:100%;
   padding:5rem 6vw 4rem;
 }
-.city-hero-inner .eyebrow{margin-bottom:.8rem}
+.city-hero-inner .eyebrow{margin-bottom:.8rem;font-size:.85rem;letter-spacing:.22em;font-weight:400}
 .city-hero-inner h1,
 .city-hero-inner .city-hero-title{
   font-size:clamp(2.6rem,6vw,5.5rem);
@@ -565,9 +566,10 @@ footer .foot-nav a:hover{color:var(--gold)}
 .blog-contact p{font-size:.82rem;color:var(--text-light);opacity:.75}
 .blog-contact a{color:var(--gold);text-underline-offset:3px}
 .gyg-section{padding:3.5rem 6vw;background:var(--obsidian);border-top:1px solid rgba(201,168,76,.08);text-align:center}
-.gyg-section .eyebrow{margin-bottom:.9rem}
-.gyg-desc{font-size:.78rem;color:var(--text-light);opacity:.7;margin:.6rem auto 1.6rem;max-width:480px;line-height:1.65}
-.gyg-btn{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-family:var(--sans);font-weight:300;color:var(--text-light);border:1px solid rgba(201,168,76,.3);padding:.75rem 1.8rem;transition:color .25s,border-color .25s}
+.gyg-section .eyebrow{margin-bottom:.9rem;font-size:1.15rem;letter-spacing:.3em;font-weight:400;color:var(--gold-light)}
+.gyg-section .section-line{opacity:.7}
+.gyg-desc{font-size:1rem;color:var(--text-light);opacity:.85;margin:.6rem auto 1.6rem;max-width:560px;line-height:1.65}
+.gyg-btn{display:inline-block;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:400;color:var(--text-light);border:1.5px solid rgba(201,168,76,.3);padding:1rem 2.4rem;transition:color .25s,border-color .25s}
 .gyg-btn:hover{color:var(--gold);border-color:var(--gold)}
 .gyg-top{padding:1.6rem 6vw;text-align:center;border-bottom:1px solid rgba(201,168,76,.06)}
 .city-pratique{padding:6rem 6vw;background:rgba(26,20,14,.8)}
@@ -864,68 +866,16 @@ footer {
   margin-top: .5rem;
 }
 .foot-version {
-  font-size: .55rem;
+  font-size: .68rem;
   letter-spacing: .16em;
-  opacity: .22;
+  opacity: .4;
   margin-top: 1.4rem;
   font-variant-numeric: tabular-nums;
 }
 .foot-credit {
-  font-size: .6rem;
+  font-size: .78rem;
   letter-spacing: .18em;
   text-transform: uppercase;
-  opacity: .35;
+  opacity: .55;
   margin: .5rem 0 .8rem;
-}
-
-/* ============================================================
-   OVERRIDES DE LISIBILITE — page croisiere.html uniquement
-   (test cible avant generalisation eventuelle au reste du site)
-   ============================================================ */
-body[data-slug="croisiere"] .city-hero-inner .eyebrow{
-  font-size:.85rem;
-  letter-spacing:.22em;
-  font-weight:400;
-}
-body[data-slug="croisiere"] .gyg-section .eyebrow{
-  font-size:1.15rem;
-  letter-spacing:.3em;
-  font-weight:400;
-  color:var(--gold-light);
-}
-body[data-slug="croisiere"] .gyg-section .section-line{
-  opacity:.7;
-}
-body[data-slug="croisiere"] .page-head .eyebrow{
-  font-size:.9rem;
-  letter-spacing:.3em;
-  font-weight:400;
-}
-body[data-slug="croisiere"] .page-head .lead{
-  font-size:1.35rem;
-  line-height:1.7;
-}
-body[data-slug="croisiere"] .back-link{
-  font-size:.75rem;
-  letter-spacing:.24em;
-}
-body[data-slug="croisiere"] .gyg-desc{
-  font-size:1rem;
-  opacity:.85;
-  max-width:560px;
-}
-body[data-slug="croisiere"] .gyg-btn{
-  font-size:.85rem;
-  letter-spacing:.14em;
-  font-weight:400;
-  padding:1rem 2.4rem;
-  border-width:1.5px;
-}
-body[data-slug="croisiere"] .foot-credit{
-  font-size:.78rem;
-  opacity:.55;
-}
-body[data-slug="croisiere"] .foot-version{
-  font-size:.68rem;
-  opacity:.4;
 }
