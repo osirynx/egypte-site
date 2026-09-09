@@ -268,6 +268,19 @@ function initAnalytics() {
   gtag('config', id, { anonymize_ip: true });
 }
 
+/* -------- AFFILIATE CLICK TRACKING (GA4) -------- */
+function initAffiliateTracking() {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="getyourguide.com"]');
+    if (!link || typeof window.gtag !== 'function') return;
+    window.gtag('event', 'affiliate_click', {
+      affiliate: 'getyourguide',
+      link_url: link.href,
+      page_path: window.location.pathname
+    });
+  });
+}
+
 /* -------- INIT -------- */
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page || 'home';
@@ -275,4 +288,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initLightbox();
   initAnalytics();
+  initAffiliateTracking();
 });
