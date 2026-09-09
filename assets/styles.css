@@ -896,6 +896,19 @@ body[data-slug="croisiere"] .gyg-section .eyebrow{
 body[data-slug="croisiere"] .gyg-section .section-line{
   opacity:.7;
 }
+body[data-slug="croisiere"] .page-head .eyebrow{
+  font-size:.9rem;
+  letter-spacing:.3em;
+  font-weight:400;
+}
+body[data-slug="croisiere"] .page-head .lead{
+  font-size:1.35rem;
+  line-height:1.7;
+}
+body[data-slug="croisiere"] .back-link{
+  font-size:.75rem;
+  letter-spacing:.24em;
+}
 body[data-slug="croisiere"] .gyg-desc{
   font-size:1rem;
   opacity:.85;
