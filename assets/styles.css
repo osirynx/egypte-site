@@ -877,3 +877,33 @@ footer {
   opacity: .35;
   margin: .5rem 0 .8rem;
 }
+
+/* ============================================================
+   OVERRIDES DE LISIBILITE — page croisiere.html uniquement
+   (test cible avant generalisation eventuelle au reste du site)
+   ============================================================ */
+body[data-slug="croisiere"] .city-hero-inner .eyebrow{
+  font-size:.85rem;
+  letter-spacing:.22em;
+  font-weight:400;
+}
+body[data-slug="croisiere"] .gyg-desc{
+  font-size:1rem;
+  opacity:.85;
+  max-width:560px;
+}
+body[data-slug="croisiere"] .gyg-btn{
+  font-size:.85rem;
+  letter-spacing:.14em;
+  font-weight:400;
+  padding:1rem 2.4rem;
+  border-width:1.5px;
+}
+body[data-slug="croisiere"] .foot-credit{
+  font-size:.78rem;
+  opacity:.55;
+}
+body[data-slug="croisiere"] .foot-version{
+  font-size:.68rem;
+  opacity:.4;
+}
