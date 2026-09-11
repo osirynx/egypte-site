@@ -133,6 +133,19 @@ for f in sorted(glob.glob("*.html") + glob.glob("blog/*.html")):
         touched += 1
 print("  %-20s %d references alignees sur ?v=%s (%d pages)"
       % ("assets HTML", total, VER, touched))
+
+# 3. Version affichee dans le footer statique de chaque page
+pat_footver = re.compile(r'(<div class="foot-version">)v[0-9]+\.[0-9]+\.[0-9]+(</div>)')
+total2, touched2 = 0, 0
+for f in sorted(glob.glob("*.html") + glob.glob("blog/*.html")):
+    s = io.open(f, encoding="utf-8").read()
+    new, n = pat_footver.subn(lambda m: m.group(1) + "v" + VER + m.group(2), s)
+    if n and new != s:
+        write(f, new)
+        total2 += n
+        touched2 += 1
+print("  %-20s %d occurrences mises a jour (%d pages)"
+      % ("footer version", total2, touched2))
 PYEOF
 
 # --- Contrôle de syntaxe JS ------------------------------------------------
