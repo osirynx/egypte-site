@@ -48,7 +48,7 @@ window.PHOTOS = [
   /* 20 */ 'photos/IMG20260417152913.webp',  /* Crocodiles momifiés Kom Ombo ★     */
   /* 21 */ 'photos/j7_01.webp',             /* Edfou — pylônes ★                  */
   /* 22 */ 'photos/j7_02.webp',             /* Edfou — hiéroglyphes               */
-  /* 23 */ 'photos/20260417_122007.webp',    /* Pont du bateau + rives du Nil      */
+  /* 23 */ 'photos/croisiere4.webp',         /* Dahabiya à la voile — Nil          */
   /* LOUXOR */
   /* 24 */ 'photos/20260421_182935.webp',    /* Temple de Louxor — coucher de soleil ★★ */
   /* 25 */ 'photos/j10_03.webp',            /* Louxor de nuit — coucher soleil    */
@@ -123,7 +123,7 @@ window.DAYS = [
    text:[
     "Arrêt matinal aux carrières de grès de Gebel El-Silsila : c'est d'ici que venaient les matériaux de la plupart des grands temples d'Égypte. On voit encore les marques d'outils dans la pierre, les inscriptions laissées par des ouvriers anonymes. Fascinant et complètement ignoré des touristes — ce qui en fait l'un des meilleurs spots du voyage.",
     "Temple d'Horus à Edfou : le mieux conservé d'Égypte, et probablement du monde antique. Enseveli sous le sable pendant des siècles, ce qui l'a protégé des pillages. Colonnes de 36 mètres, hiéroglyphes sur chaque centimètre carré du sol au plafond. Le guide nous explique la bataille mythologique entre Horus et Seth, gravée intégralement sur les murs. Soudainement, les symboles parlent. C'est une des plus grandes satisfactions intellectuelles du voyage.",
-    "Retour sur le pont. Livre, soleil, rives qui défilent, thé à la menthe. Légère tourista en soirée — le fameux « sick boat », maladie officielle de la croisière nilotique. On mange léger. Le Nil, lui, continue de couler, totalement indifférent à nos estomacs.",
+    "Retour sur le pont. Livre, soleil, rives qui défilent, thé à la menthe. La croisière trouve son rythme : lenteur assumée, service attentionné, un dîner servi alors que le soleil descend sur l'eau. Le Nil, lui, continue de couler, imperturbable, comme il le fait depuis des millénaires.",
    ]},
   {id:'jour-8', no:'Jour 8', date:'19 Avril 2026', title:"Bienvenue <b>à Louxor</b>", photos:[26,29],
    text:[
