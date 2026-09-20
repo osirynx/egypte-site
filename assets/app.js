@@ -174,12 +174,20 @@ function initAnalytics() {
 }
 
 /* -------- AFFILIATE CLICK TRACKING (GA4) -------- */
+const AFFILIATE_PARTNERS = [
+  { host: 'getyourguide.com', name: 'getyourguide' },
+  { host: 'filovent.com',     name: 'filovent' }
+];
+
 function initAffiliateTracking() {
+  const selector = AFFILIATE_PARTNERS.map(p => `a[href*="${p.host}"]`).join(',');
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href*="getyourguide.com"]');
+    const link = e.target.closest(selector);
     if (!link || typeof window.gtag !== 'function') return;
+    const partner = AFFILIATE_PARTNERS.find(p => link.href.includes(p.host));
+    if (!partner) return;
     window.gtag('event', 'affiliate_click', {
-      affiliate: 'getyourguide',
+      affiliate: partner.name,
       link_url: link.href,
       page_path: window.location.pathname
     });
