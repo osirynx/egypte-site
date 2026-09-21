@@ -121,7 +121,7 @@ window.DAYS = [
    ]},
   {id:'jour-7', no:'Jour 7', date:'18 Avril 2026', title:"Edfou & <b>les Hiéroglyphes</b>", photos:[21,22],
    text:[
-    "Arrêt matinal aux carrières de grès de Gebel El-Silsila : c'est d'ici que venaient les matériaux de la plupart des grands temples d'Égypte. On voit encore les marques d'outils dans la pierre, les inscriptions laissées par des ouvriers anonymes. Fascinant et complètement ignoré des touristes — ce qui en fait l'un des meilleurs spots du voyage.",
+    "Arrêt matinal aux carrières de grès de Gebel El-Silsila : c'est d'ici que venaient les matériaux de de nombreux grands temples de Haute-Égypte. On voit encore les marques d'outils dans la pierre, les inscriptions laissées par des ouvriers anonymes. Fascinant et complètement ignoré des touristes — ce qui en fait l'un des meilleurs spots du voyage.",
     "Temple d'Horus à Edfou : le mieux conservé d'Égypte, et probablement du monde antique. Enseveli sous le sable pendant des siècles, ce qui l'a protégé des pillages. Pylônes de 36 mètres, hiéroglyphes sur chaque centimètre carré du sol au plafond. Le guide nous explique la bataille mythologique entre Horus et Seth, gravée intégralement sur les murs. Soudainement, les symboles parlent. C'est une des plus grandes satisfactions intellectuelles du voyage.",
     "Retour sur le pont. Livre, soleil, rives qui défilent, thé à la menthe. La croisière trouve son rythme : lenteur assumée, service attentionné, un dîner servi alors que le soleil descend sur l'eau. Le Nil, lui, continue de couler, imperturbable, comme il le fait depuis des millénaires.",
    ]},
