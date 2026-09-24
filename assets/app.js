@@ -11,7 +11,7 @@
      MINEUR  nouvel article, nouvelle page, nouvelle fonctionnalite
      PATCH   correction de contenu, de lien, de style
    ============================================================ */
-const SITE_VERSION = '4.2.11';
+const SITE_VERSION = '4.2.12';
 
 /* -------- NAV + FOOTER -------- */
 function injectShell(activePage) {
