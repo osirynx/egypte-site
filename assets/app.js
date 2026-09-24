@@ -158,6 +158,10 @@ function initLightbox() {
 
 /* -------- GOOGLE ANALYTICS -------- */
 function initAnalytics() {
+  // Le snippet GA4 est deja inline dans le <head> de chaque page : ne pas relancer
+  // gtag('config') une 2e fois (page_view double + gtag.js charge deux fois).
+  // Ce code ne sert plus que de secours si le snippet inline est absent.
+  if (typeof window.gtag === 'function') return;
   const id = window.GA_ID;
   if (!id || id === 'G-XXXXXXXXXX') return; // placeholder — GA non encore configuré
 
