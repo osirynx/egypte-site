@@ -66,15 +66,6 @@ window.PHOTOS = [
   /* 36 */ 'photos/infos-pratiques.webp',   /* Infos pratiques — guide            */
 ];
 
-window.TIMELINE = [
-  {n:'Jour 0',     date:'11 Avril',   place:'Nice → Le Caire',       sum:"Départ de Nice (Lufthansa via Francfort). Arrivée au Caire à 3h du matin. Le patron de l'hôtel nous accueille avec jus et chocolats.", target:'jour-0'},
-  {n:'Jours 1–4',  date:'12–15 Avril',place:'Le Caire',              sum:"Quartier copte, souk Khân al-Khalili, Pyramides de Gizeh, Sphinx en chameau, Saqqara, Grand Musée Égyptien, Zamalek.", target:'jour-1'},
-  {n:'Jour 4',     date:'15 Avril',   place:'Le Caire → Assouan',    sum:"Vol Air Cairo. Arrivée dans le « vrai Sud ». Arrivée dans un petit quartier authentique. Souk d'Assouan.", target:'jour-4'},
-  {n:'Jour 5',     date:'16 Avril',   place:'Assouan · Abou Simbel', sum:"Réveil à 3h25. Minibus pour Abou Simbel. Temple de Ramsès II et Néfertari. Île de Philæ de nuit. Île Éléphantine, dîner nubien en rooftop.", target:'jour-5'},
-  {n:'Jours 6–7',  date:'17–18 Avril',place:'Croisière sur le Nil',  sum:"Bateau magnifique avec mini-pont sur l'eau. Kom Ombo, carrières de grès, temple d'Horus à Edfou — le mieux conservé d'Égypte.", target:'jour-6'},
-  {n:'Jours 8–11', date:'19–22 Avril',place:'Louxor',                sum:"Karnak, Temple d'Hatchepsout, Temple de Louxor de nuit, Vallée des Rois, Colosses de Memnon.", target:'jour-8'},
-  {n:'Jours 12–14',date:'23–25 Avril',place:'Somabay · Mer Rouge',   sum:"Repos total. Snorkeling, baignade. Buffets. Récupération bien méritée avant le retour.", target:'jour-12'},
-];
 
 window.DAYS = [
   {id:'jour-0', no:'Jour 0', date:'11 Avril 2026', title:"Le Grand <b>Départ</b>", photos:[33],
@@ -222,72 +213,6 @@ window.GODS = [
    vu:"Vu à : Deir el-Bahari, Louxor"},
 ];
 
-window.INFOS = [
-  {ic:'✈️', t:'Vols & Arrivée', items:[
-    'Aéroports principaux : Le Caire (CAI), Louxor (LXR), Assouan (ASW), Hurghada (HRG)',
-    'Vols directs vers Le Caire depuis la plupart des grandes villes européennes (~4–6h)',
-    'Vols charters directs vers Hurghada ou Sharm el-Sheikh depuis de nombreux aéroports européens',
-    'Vols intérieurs EgyptAir / Air Cairo : Le Caire → Assouan ou Louxor (~1h, 40–80€)',
-    'Depuis l\'aéroport du Caire : Uber recommandé (300–400 LE vers le centre) — <strong>le chauffeur peut tenter de renégocier à l\'arrivée, tenez-vous en au prix affiché</strong>',
-  ]},
-  {ic:'🛂', t:'Visa & Formalités', items:[
-    '<strong>Visa obligatoire pour la quasi-totalité des nationalités</strong> — à obtenir avant le départ',
-    'E-visa recommandé : <a href="https://visa2egypt.gov.eg/" target="_blank" rel="noopener"><strong>visa2egypt.gov.eg</strong></a> — ~25 USD',
-    '<strong>Attention : la saisie en ligne est laborieuse</strong> — prenez le temps de bien remplir chaque champ, une erreur peut bloquer la demande',
-    'Traitement généralement en 3–5 jours ouvrés — ne pas attendre la veille du départ',
-    'Visa à l\'arrivée possible dans certains aéroports (30 USD) mais files d\'attente importantes',
-    'Passeport valide au moins 6 mois après la date de retour requis',
-  ]},
-  {ic:'💷', t:'Budget & Monnaie', items:[
-    'Monnaie : Livre Égyptienne (LE / EGP)',
-    '<strong>Taux de change indicatif : 1 € ≈ 60 EGP · 1 USD ≈ 50 EGP</strong> (variable — vérifier avant départ)',
-    'Budget journalier moyen : <strong>~50€ / ~40 USD par personne</strong> (hébergement + repas + entrées)',
-    'Budget serré possible dès <strong>~30€ / ~25 USD par jour</strong> en guest house et restaurants locaux',
-    'Retraits DAB : généralement limités à <strong>2 000–5 000 EGP par opération</strong> — prévoir plusieurs retraits',
-    'Carte bancaire acceptée dans les grands hôtels et musées — espèces indispensables partout ailleurs',
-    'Pourboires (<em>baksheesh</em>) : pratique culturelle normale — prévoir de la monnaie en petites coupures',
-  ]},
-  {ic:'🚖', t:'Transports', items:[
-    '<strong>Uber</strong> : recommandé dans toutes les grandes villes — prix fixé à l\'écran <em>sauf pour les sites touristiques éloignés</em> (Saqqara, Gizeh…) où le chauffeur peut tenter de renégocier à l\'arrivée — soyez ferme',
-    '<strong>Train</strong> : Louxor → Assouan en ~3h (~5–10€ en 1ère classe) — confortable et ponctuel',
-    '<strong>Taxi Louxor → Hurghada</strong> : compter <strong>~4 000 EGP</strong> pour un taxi privé — à négocier à l\'avance avant de monter',
-    '<strong>Vols intérieurs</strong> : Le Caire → Assouan ou Louxor (~1h) — EgyptAir ou Air Cairo',
-    '<strong>Croisière Nil</strong> : la plus belle façon de relier Assouan et Louxor (3–4 nuits)',
-    'Métro du Caire : propre, rapide, ~10 LE le ticket — idéal pour les quartiers centraux',
-  ]},
-  {ic:'🌡', t:'Météo & Saisons', items:[
-    '<strong>Octobre–avril</strong> : meilleure période — 20–28°C, idéal pour les sites archéologiques',
-    '<strong>Novembre–février</strong> : haute saison touristique, températures parfaites (18–25°C)',
-    '<strong>Mars–avril</strong> : bon compromis, moins de monde, début de la chaleur',
-    '<strong>Mai–septembre</strong> : chaleur extrême (40–48°C) — déconseillé sauf Mer Rouge avec A/C',
-    'Louxor / Assouan : toujours plus chaud que Le Caire (jusqu\'à 44°C en avril)',
-    'Mer Rouge : eau entre 22°C (hiver) et 28°C (automne) — idéal septembre–novembre',
-  ]},
-  {ic:'🏥', t:'Santé & Sécurité', items:[
-    'Vaccins recommandés : hépatite A, typhoïde — consulter un médecin du voyage avant départ',
-    '<strong>Eau du robinet : ne jamais boire</strong> — eau en bouteille uniquement (même pour se rincer les dents)',
-    'Turista fréquente : emporter probiotiques, Smecta, Imodium',
-    'SPF 50 indispensable — soleil intense même en hiver à Louxor et Assouan',
-    'Égypte : destination sûre pour les touristes dans les zones visitées',
-    'Assurance voyage avec couverture médicale et rapatriement obligatoire',
-  ]},
-  {ic:'📱', t:'Communication & SIM', items:[
-    '<strong>Carte SIM locale recommandée</strong> : Vodafone ou Orange Égypte — ~10€ pour 10 Go · passeport requis à l\'achat',
-    'S\'acheter à l\'aéroport ou en ville dès l\'arrivée',
-    '<strong>eSIM : alternative pratique</strong> — configurable avant le départ depuis votre téléphone · Exemple : ~20€ pour 5 Go / 15 jours · compatible avec la plupart des téléphones récents · chercher "eSIM Égypte" sur Airalo ou Holafly',
-    'Wi-Fi disponible dans la plupart des hôtels — qualité variable en dehors du Caire',
-    'Réseau 4G dans les villes, couverture limitée dans le désert',
-    'WhatsApp fonctionne normalement — aucun VPN requis',
-  ]},
-  {ic:'🕌', t:'Culture & Usages', items:[
-    'Pays à majorité musulmane — respect des codes vestimentaires dans les lieux de culte',
-    'Tenues couvrantes recommandées (épaules et genoux) pour les mosquées et certains sites',
-    'Ramadan : ambiance différente, horaires des restaurants modifiés — anticiper si votre séjour coïncide',
-    'Pourboires (<em>baksheesh</em>) : pratique culturelle normale — 20–50 LE suffisent',
-    'Négociation : normale dans les souks et avec les taxis non-Uber',
-    'Photographier militaires et bâtiments officiels : interdit',
-  ]},
-];
 
 /* ============================================================
    GOOGLE ANALYTICS
