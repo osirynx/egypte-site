@@ -891,3 +891,9 @@ footer .foot-legal a:hover{color:var(--gold, inherit)}
 .blog-body strong{color:var(--ivory);font-weight:400}
 .blog-intro{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--gold-light);line-height:1.7;margin:0 0 3rem;padding:1.4rem 1.8rem;border-left:2px solid rgba(201,168,76,.45);background:rgba(201,168,76,.04)}
 @media(max-width:680px){.blog-article{padding:3.5rem 5vw 5rem}}
+.blog-body ul{padding-left:1.4rem;margin-bottom:1.2rem}
+.blog-body li{font-size:.88rem;line-height:1.8;color:var(--text-light);margin-bottom:.5rem}
+.blog-body a{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(201,168,76,.35);text-underline-offset:3px}
+.home-guide{border-top:1px solid rgba(201,168,76,.08)}
+.home-guide .s-head{margin-bottom:2.5rem}
+.home-guide .blog-intro{margin-top:0}
