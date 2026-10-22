@@ -882,3 +882,12 @@ footer {
 footer .foot-legal{font-size:.62rem;color:var(--smoke);margin-top:.7rem;text-align:center;letter-spacing:.04em}
 footer .foot-legal a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 footer .foot-legal a:hover{color:var(--gold, inherit)}
+/* Pages de texte (A propos, Mentions legales) : meme rendu que les articles du blog */
+.blog-article{padding:5rem 6vw 7rem}
+.blog-body{max-width:820px;margin:0 auto}
+.blog-body h2{font-size:clamp(1.5rem,2.8vw,2rem);text-align:left;margin:3.5rem 0 1.2rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,.1);letter-spacing:.005em}
+.blog-body h2:first-child{margin-top:0;padding-top:0;border-top:none}
+.blog-body p{font-size:.9rem;line-height:1.9;color:var(--text-light);margin-bottom:1.2rem}
+.blog-body strong{color:var(--ivory);font-weight:400}
+.blog-intro{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--gold-light);line-height:1.7;margin:0 0 3rem;padding:1.4rem 1.8rem;border-left:2px solid rgba(201,168,76,.45);background:rgba(201,168,76,.04)}
+@media(max-width:680px){.blog-article{padding:3.5rem 5vw 5rem}}
