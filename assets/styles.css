@@ -879,3 +879,6 @@ footer {
   opacity: .55;
   margin: .5rem 0 .8rem;
 }
+footer .foot-legal{font-size:.62rem;color:var(--smoke);margin-top:.7rem;text-align:center;letter-spacing:.04em}
+footer .foot-legal a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+footer .foot-legal a:hover{color:var(--gold, inherit)}
