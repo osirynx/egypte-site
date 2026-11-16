@@ -4,7 +4,8 @@
 # -----------------------------------------------------------------------------
 #  Incrémente SITE_VERSION dans assets/app.js, aligne TOUTES les références
 #  ?v= des assets sur cette version, commite, tague, pousse, et purge le
-#  cache Cloudflare si les identifiants sont disponibles.
+#  cache Cloudflare si les identifiants sont disponibles, puis signale les
+#  pages modifiées aux moteurs IndexNow (Bing...) via ./indexnow.sh.
 #
 #  Pourquoi les deux doivent bouger ensemble :
 #  les assets sont servis en "cache-control: max-age=31536000, immutable".
@@ -162,6 +163,10 @@ if [ "$DRY_RUN" -eq 1 ]; then
   exit 0
 fi
 
+# --- Bornes pour IndexNow : contenu modifié depuis la dernière publication --
+INDEXNOW_BASE=$(git rev-parse -q --verify origin/main 2>/dev/null || true)
+INDEXNOW_HEAD=$(git rev-parse HEAD)
+
 # --- Commit + tag ----------------------------------------------------------
 git add -A
 git commit -q -m "v$NEW — $MSG
@@ -221,6 +226,11 @@ LIVE=$(curl -s --max-time 25 "https://egypte.osirynx.com/?nocache=$(date +%s)" \
        | grep -oE 'assets/app\.js\?v=[0-9]+\.[0-9]+\.[0-9]+' | head -1)
 if [ "$LIVE" = "assets/app.js?v=$NEW" ]; then
   echo "PRODUCTION OK — la page d'accueil reference bien ?v=$NEW"
+  # IndexNow : seules les pages modifiées par les commits de contenu (pas le
+  # simple alignement ?v= du bump) sont signalées à Bing & co.
+  if [ -x ./indexnow.sh ] && [ -n "$INDEXNOW_BASE" ] && [ "$INDEXNOW_BASE" != "$INDEXNOW_HEAD" ]; then
+    ./indexnow.sh --since "$INDEXNOW_BASE" "$INDEXNOW_HEAD" || echo "  IndexNow             échec non bloquant — relancer ./indexnow.sh à la main"
+  fi
 else
   echo "ATTENTION — la production reference encore : ${LIVE:-<introuvable>}"
   echo "Verifier le deploiement Vercel, puis purger le cache Cloudflare."
