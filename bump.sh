@@ -192,7 +192,7 @@ echo "  Vercel               deploiement declenche (~40s)"
 
 # --- Purge Cloudflare (si identifiants disponibles) ------------------------
 CF_ENV=""
-for c in "$HOME/.egypte-cloudflare.env" "/volume1/specific/egypte-cloudflare.env"; do
+for c in "${HOME:-/nonexistent}/.egypte-cloudflare.env" "/volume1/specific/egypte-cloudflare.env"; do
   [ -f "$c" ] && CF_ENV="$c" && break
 done
 
